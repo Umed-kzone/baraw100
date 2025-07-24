@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grid View Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+      background-color: #f4f4f4;
+      justify-content: center;
+      aling-items: center;
+      place-items: center;
+    }
+  p {
+    font-weight: 900;
+    font-size: 4vh;
+    text-align: center;
+    margin-top: 2vh;
+  }
+  .by {
+    font-weight: 500;
+    font-size: 2vh;
+    margin-top: 18vh;
+    margin-left: 30vh;
+  }
+  h1 {
+    font-weight: 500;
+    font-size:3vh;
+  }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .grid-item {
+      background-color: #fff;
+      border-radius: 8px;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .grid-item:hover {
+      transform: scale(1.03);
+    }
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      max-width: 80px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+    .name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .title {
+      font-size: 14px;
+      color: #666;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 12vh;
+        background-color: transparent;
+        border: solid;
+        border-radius: 2vh;
+        border-color: transparent;
+        padding: 1vh;
+        box-shadow: 0px 0px 10px #bbbbbb;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p>مامۆستایان</p>
+
+  <div class="grid-container">
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusit60ddHd4vzhW18Z4ihgXc&si=4eFXLPPQfB91pn17" class="grid-item">
+      <img src="Biology.jpg" alt="Profile 1">
+      <div class="name">زیـندەزانـی</div>
+      <div class="title">م.صـنعان حـامد</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusjK7ON-FyHGK4aAQGvjP4PW&si=iCLg3m89sHBU5-Ir" class="grid-item">
+      <img src="English.jpg" alt="Profile 2">
+      <div class="name">English <br> (Grammer)</div>
+      <div class="title">م.یـوسف ڕەسـول</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusiyQZdryTtmumu--YBYA3US&si=7dlLqCY9hQ9p2_-4" class="grid-item">
+      <img src="Physics.jpg" alt="Profile 3">
+      <div class="name">فـیزیا</div>
+      <div class="title">م.کاروان کەیـفی</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLFAx467JyGgn0DoWS8owiv3Li-GyQi7Uj&si=VXcGRKInqAQetvTJ" class="grid-item">
+      <img src="Chemistry.jpg" alt="Profile 4">
+      <div class="name">کـیمیا</div>
+      <div class="title">م.هـێدی حـسن</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLqibWIL7z4MsffOMQAgfndjELjTB62Xxy&si=PZ2OddEqxdfed72i" class="grid-item">
+      <img src="English2.jpg" alt="Profile 5">
+      <div class="name">English <br> (Reading)</div>
+      <div class="title">م.عـبدالقـادر</div>
+    </a>
+  </div>
+  
+   <h1>...پەیج لەژێر دروستکردندایە</h1>
+</body>
+</html>
