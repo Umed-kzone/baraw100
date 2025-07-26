@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Grid View Links</title>
+  <title>Baraw100</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -29,11 +29,30 @@
   h1 {
     font-weight: 500;
     font-size:3vh;
+    margin-bottom: 12vh;
+    border: solid;
+    border-radius: 0px;
+    padding: 1vh;
+  }
+  h2 {
+    font-weight: 500;
+    font-size: 2.5vh;
+    color: red;
   }
     .grid-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
+      align-items: right;
+      justify-content: right;
+      place-items: right;
+    }
+      .grid-container2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+         align-items: right;
+      justify-content: right;
     }
     .grid-item {
       background-color: #fff;
@@ -41,16 +60,45 @@
       text-align: center;
       padding: 15px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      transition: transform 0.1s;
+    }
+      .grid-item2 {
+      background-color: #fff;
+      border-radius: 8px;
+      text-align: center;
+      padding: 8px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      transition: transform 0.1s;
+    }
+  /* Bounce animation keyframes */
+    @keyframes bounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+   .bounce {
+      animation: bounce 0.08s ease;
     }
     .grid-item:hover {
-      transform: scale(1.03);
+      transform: scale(1.1);
     }
     .grid-item img {
       width: 100%;
       height: auto;
       max-width: 80px;
       border-radius: 50%;
+      margin-bottom: 8px;
+    }
+      .grid-item2:hover {
+        border-color: red;
+        border: 1px solid;
+        box-shadow: 0px 0px 10px rgba(255,150,0,0.7);
+    }
+    .grid-item2 img {
+      width: 100%;
+      height: auto;
+      max-width: 100px;
+      border-radius: 10%;
       margin-bottom: 8px;
     }
     .name {
@@ -75,41 +123,121 @@
         border-color: transparent;
         padding: 1vh;
         box-shadow: 0px 0px 10px #bbbbbb;
+              align-items: right;
+      justify-content: right;
+        place-items: center;
+        direction: rtl;
+      }
+    }
+     @media (max-width: 600px) {
+      .grid-container2 {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 12vh;
+        background-color: transparent;
+        border: solid;
+        border-radius: 2vh;
+        border-color: transparent;
+        padding: 1vh;
+              align-items: right;
+      justify-content: right;
+        direction: rtl;
       }
     }
   </style>
 </head>
 <body>
+  <audio id="clickSound" src="click.ogg" preload="auto"></audio>
   <p>مامۆستایان</p>
 
   <div class="grid-container">
     <a href="https://youtube.com/playlist?list=PLl0EZqS7iusit60ddHd4vzhW18Z4ihgXc&si=4eFXLPPQfB91pn17" class="grid-item">
-      <img src="Biology.jpg" alt="Profile 1">
+      <img src="Biology.jpg" alt="part 1">
       <div class="name">زیـندەزانـی</div>
       <div class="title">م.صـنعان حـامد</div>
     </a>
     <a href="https://youtube.com/playlist?list=PLl0EZqS7iusjK7ON-FyHGK4aAQGvjP4PW&si=iCLg3m89sHBU5-Ir" class="grid-item">
-      <img src="English.jpg" alt="Profile 2">
+      <img src="English.jpg" alt="part 2">
       <div class="name">English <br> (Grammer)</div>
       <div class="title">م.یـوسف ڕەسـول</div>
     </a>
     <a href="https://youtube.com/playlist?list=PLl0EZqS7iusiyQZdryTtmumu--YBYA3US&si=7dlLqCY9hQ9p2_-4" class="grid-item">
-      <img src="Physics.jpg" alt="Profile 3">
+      <img src="Physics.jpg" alt="part 3">
       <div class="name">فـیزیا</div>
       <div class="title">م.کاروان کەیـفی</div>
     </a>
     <a href="https://youtube.com/playlist?list=PLFAx467JyGgn0DoWS8owiv3Li-GyQi7Uj&si=VXcGRKInqAQetvTJ" class="grid-item">
-      <img src="Chemistry.jpg" alt="Profile 4">
+      <img src="Chemistry.jpg" alt="part 4">
       <div class="name">کـیمیا</div>
       <div class="title">م.هـێدی حـسن</div>
     </a>
     <a href="https://youtube.com/playlist?list=PLqibWIL7z4MsffOMQAgfndjELjTB62Xxy&si=PZ2OddEqxdfed72i" class="grid-item">
-      <img src="English2.jpg" alt="Profile 5">
+      <img src="English2.jpg" alt="part 5">
       <div class="name">English <br> (Reading)</div>
       <div class="title">م.عـبدالقـادر</div>
     </a>
   </div>
-  
+  <p>بەشەکانی‌تر</p>
+  <h2 id="aler" style="display: none;">!ببورە ئەم بەشە لەژێر دروستکردندایە *</h2>
+  <div class="grid-container2" onclick="playSound()">
+    <a href="quran.html" class="grid-item2" onclick="bounce(this)">
+      <img src="quran.png" alt="Profile 1">
+      <div class="name">عیبادەت</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+      <img src="table.png" alt="Profile 2">
+      <div class="name">خشتەی خوێندن</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+      <img src="plans.png" alt="Profile 3">
+      <div class="name">پلان</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+      <img src="quotes.png" alt="Profile 4">
+      <div class="name">تێبینی گرنگ</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+      <img src="questions.png" alt="Profile 5">
+      <div class="name">پرسیار</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+      <img src="diet.png" alt="Profile 6">
+      <div class="name">ڕێجیم</div>
+    </a>
+  </div>
    <h1>...پەیج لەژێر دروستکردندایە</h1>
+  
+  <script>
+function playSound() {
+  const sound = document.getElementById("clickSound");
+  sound.currentTime = 0;
+  sound.play();
+}
+  
+  function bounce(button) {
+    button.classList.remove('bounce'); // reset animation if already applied
+    void button.offsetWidth; // force reflow (trick to restart the animation)
+    button.classList.add('bounce');
+  }
+  
+    function toggleVisibility() {
+    const box = document.getElementById("aler");
+    if (box.style.display === "none") {
+      box.style.display = "block"; // show it
+    }
+  }
+  
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Stop immediate navigation
+      const url = this.href;
+      if (url) {
+      setTimeout(() => {
+        window.location.href = url; // Navigate after 1 second delay
+      }, 500);
+      }
+    });
+  });
+</script>
+  
 </body>
 </html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vertical List UI</title>
+  <style>
+  @font-face {
+      font-family: 'mifo';
+      src: url('quran.ttf') format('ttf'),
+           url('quran.ttf') format('ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 4vh;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-family: 'mifo', san-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+    .list-item {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.2s ease;
+      place-items: right;
+      direction: rtl;
+    }
+
+    .list-item:hover {
+      transform: scale(1.05);
+    }
+
+    .item-name {
+      font-size: 3vh;
+      font-weight: 700;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .btn {
+      background-color: white;
+      padding: 8px 12px;
+      border: solid;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.2s;
+    }
+
+    .btn.view {
+      border: solid;
+      border-color: #4caf50;
+      color: black;
+      border-width: 2px;
+    }
+
+    .btn.view:hover {
+      background-color: #45a049;
+      color: white;
+    }
+
+    .btn.edit {
+      border: solid;
+      border-color: #2196f3;
+      color: black;
+    }
+
+    .btn.edit:hover {
+      background-color: #1976d2;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">الَّذِينَ آمَنُوا وَتَطْمَئِنُّ قُلُوبُهُم بِذِكْرِ اللَّهِ ۗ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ(28)</div>
+
+    <div class="list-item">
+      <div class="item-name">زیکری بەیانیان</div>
+      <div class="actions">
+        <a href="https://m.youtube.com/results?sp=mAEA&search_query=adhkar+al+sabah" class="btn view">گوێگرتن</a>
+        <a href="https://www.islambook.com/azkar/1/%D8%A3%D8%B0%D9%83%D8%A7%D8%B1-%D8%A7%D9%84%D8%B5%D8%A8%D8%A7%D8%AD" class="btn edit">خوێندن</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">سوڕەتی النصر</div>
+      <div class="actions">
+        <a href="https://www.youtube.com/results?sp=mAEA&search_query=surah+an-nasr" class="btn view">گوێگرتن</button>
+        <a href="https://quran.com/ar/110" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">سوڕەتی الشرح</div>
+      <div class="actions">
+        <a href="https://www.youtube.com/results?sp=mAEA&search_query=surah+ash-sharh" class="btn view">گوێگرتن</a>
+        <a href="https://quran.com/ar/94" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">سوڕەتی الواقعة</div>
+      <div class="actions">
+        <a href="https://www.youtube.com/results?sp=mAEA&search_query=surah+al-waqiah" class="btn view">گوێگرتن</a>
+        <a href="https://quran.com/ar/al-waqiah" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">سوڕەتی یس</div>
+      <div class="actions">
+        <a href="https://www.youtube.com/results?sp=mAEA&search_query=surah+yaseen" class="btn view">گوێگرتن</a>
+        <a href="https://quran.com/ar/ya-sin" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">سوڕەتی الرحمن</div>
+      <div class="actions">
+        <a href="https://www.youtube.com/results?sp=mAEA&search_query=surah+ar-rahman" class="btn view">گوێگرتن</a>
+        <a href="https://quran.com/ar/ar-rahman" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">سوڕەتی المرسلات</div>
+      <div class="actions">
+        <a href="https://www.youtube.com/results?sp=mAEA&search_query=surah+al-mursalat" class="btn view">گوێگرتن</a>
+        <a href="https://quran.com/77" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">سوڕەتی القمر</div>
+      <div class="actions">
+        <a href="https://www.youtube.com/results?sp=mAEA&search_query=surah+al-qamar" class="btn view">گوێگرتن</a>
+        <a href="https://quran.com/54" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">سوڕەتی الانسان</div>
+      <div class="actions">
+        <a href="https://www.youtube.com/results?sp=mAEA&search_query=surah+al-insan" class="btn view">گوێگرتن</a>
+        <a href="https://quran.com/76" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+
+    <div class="list-item">
+      <div class="item-name">زیکری ئێواران</div>
+      <div class="actions">
+        <a href="https://m.youtube.com/results?sp=mAEA&search_query=adhkar+al+masaa" class="btn view">گوێگرتن</a>
+        <a href="https://www.islambook.com/azkar/2/%D8%A3%D8%B0%D9%83%D8%A7%D8%B1-%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A1" class="btn edit">خوێندنەوە</a>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+</body>
+</html>
