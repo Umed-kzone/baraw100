@@ -42,7 +42,7 @@
     .grid-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 1vh;
       align-items: right;
       justify-content: right;
       place-items: right;
@@ -58,17 +58,22 @@
       background-color: #fff;
       border-radius: 8px;
       text-align: center;
-      padding: 15px;
+      padding: 2vh;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: transform 0.1s;
+      height: 18vh;
+      width: 10vh;
+      margin: 0vh;
     }
       .grid-item2 {
       background-color: #fff;
       border-radius: 8px;
       text-align: center;
-      padding: 8px;
+      padding: 1vh;
       box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
       transition: transform 0.1s;
+        height: 16vh;
+        width: 12vh;
     }
   /* Bounce animation keyframes */
     @keyframes bounce {
@@ -103,17 +108,17 @@
     }
     .name {
       font-weight: bold;
-      font-size: 16px;
+      font-size: auto;
     }
     .title {
-      font-size: 14px;
+      font-size: 1.6vh;
       color: #666;
     }
     a {
       text-decoration: none;
       color: inherit;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 70vh) {
       .grid-container {
         grid-template-columns: repeat(3, 1fr);
         margin-bottom: 12vh;
