@@ -58,11 +58,12 @@
       background-color: #fff;
       border-radius: 8px;
       text-align: center;
-      padding: 2vh;
+      padding: 0.8vh;
+      padding-bottom: 2vh;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: transform 0.1s;
       height: 18vh;
-      width: 10vh;
+      width: 11.5vh;
       margin: 0vh;
     }
       .grid-item2 {
@@ -73,7 +74,7 @@
       box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
       transition: transform 0.1s;
         height: 16vh;
-        width: 12vh;
+        width: 11.5vh;
     }
   /* Bounce animation keyframes */
     @keyframes bounce {
@@ -90,9 +91,12 @@
     .grid-item img {
       width: 100%;
       height: auto;
-      max-width: 80px;
-      border-radius: 50%;
+      max-width: 100px;
+      border-radius: 10%;
+      border: solid;
+      margin: 0px;
       margin-bottom: 8px;
+      border-width: 0px;
     }
       .grid-item2:hover {
         border-color: red;
@@ -131,7 +135,6 @@
               align-items: right;
       justify-content: right;
         place-items: center;
-        direction: rtl;
       }
     }
      @media (max-width: 600px) {
@@ -152,59 +155,80 @@
 </head>
 <body>
   <audio id="clickSound" src="click.ogg" preload="auto"></audio>
+  <audio id="clickSound2" src="click3.wav" preload="auto"></audio>
   <p>مامۆستایان</p>
 
   <div class="grid-container">
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusit60ddHd4vzhW18Z4ihgXc&si=4eFXLPPQfB91pn17" class="grid-item">
+    <a href="https://youtube.com/playlist?list=PLNDYhMhf3Yfh6XLTONbmw8McTq90eTNSX&si=N8SCu8yjx4jYfaHf" class="grid-item" onclick="playSound2()">
+      <img src="Biology2.jpg" alt="part 1">
+      <div class="name">زیـندەزانـی</div>
+      <div class="title">م.هۆشیار حسن</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusit60ddHd4vzhW18Z4ihgXc&si=4eFXLPPQfB91pn17" class="grid-item" onclick="playSound2()">
       <img src="Biology.jpg" alt="part 1">
       <div class="name">زیـندەزانـی</div>
       <div class="title">م.صـنعان حـامد</div>
     </a>
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusjK7ON-FyHGK4aAQGvjP4PW&si=iCLg3m89sHBU5-Ir" class="grid-item">
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusjK7ON-FyHGK4aAQGvjP4PW&si=iCLg3m89sHBU5-Ir" class="grid-item" onclick="playSound2()">
       <img src="English.jpg" alt="part 2">
       <div class="name">English <br> (Grammer)</div>
       <div class="title">م.یـوسف ڕەسـول</div>
     </a>
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusiyQZdryTtmumu--YBYA3US&si=7dlLqCY9hQ9p2_-4" class="grid-item">
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusiyQZdryTtmumu--YBYA3US&si=7dlLqCY9hQ9p2_-4" class="grid-item" onclick="playSound2()">
       <img src="Physics.jpg" alt="part 3">
       <div class="name">فـیزیا</div>
       <div class="title">م.کاروان کەیـفی</div>
     </a>
-    <a href="https://youtube.com/playlist?list=PLFAx467JyGgn0DoWS8owiv3Li-GyQi7Uj&si=VXcGRKInqAQetvTJ" class="grid-item">
+    <a href="https://youtube.com/playlist?list=PL_9sYSyesA40RhUGaYgxZbWFB6Y1akCaN&si=d9XzheQuTYwv57UI" class="grid-item" onclick="playSound2()">
+      <img src="Physics2.jpg" alt="part 3">
+      <div class="name">فـیزیا</div>
+      <div class="title">م.شێرزاد علی</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PL3YGFJ5LaxdQNQIdwhU7apPZGOortnIL0&si=rbcsA-wb_PosLCie" class="grid-item" onclick="playSound2()">
+      <img src="English2.jpg" alt="part 5">
+      <div class="name">English <br> (Grammer)</div>
+      <div class="title">م.دڵشاد محمد</div>
+    </a>
+        <a href="https://youtube.com/playlist?list=PLFAx467JyGgn0DoWS8owiv3Li-GyQi7Uj&si=VXcGRKInqAQetvTJ" class="grid-item" onclick="playSound2()">
       <img src="Chemistry.jpg" alt="part 4">
       <div class="name">کـیمیا</div>
       <div class="title">م.هـێدی حـسن</div>
     </a>
-    <a href="https://youtube.com/playlist?list=PLqibWIL7z4MsffOMQAgfndjELjTB62Xxy&si=PZ2OddEqxdfed72i" class="grid-item">
-      <img src="English2.jpg" alt="part 5">
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusim-RpCn6kyE2diHBugyu7L&si=L9PK6BB7SkfZdjkK" class="grid-item" onclick="playSound2()">
+      <img src="Chemistry2.jpg" alt="part 4">
+      <div class="name">کـیمیا</div>
+      <div class="title">م.یونس عمر</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLqibWIL7z4MsffOMQAgfndjELjTB62Xxy&si=PZ2OddEqxdfed72i" class="grid-item" onclick="playSound2()">
+      <img src="English3.jpg" alt="part 5">
       <div class="name">English <br> (Reading)</div>
       <div class="title">م.عـبدالقـادر</div>
     </a>
   </div>
   <p>بەشەکانی‌تر</p>
   <h2 id="aler" style="display: none;">!ببورە ئەم بەشە لەژێر دروستکردندایە *</h2>
-  <div class="grid-container2" onclick="playSound()">
-    <a href="quran.html" class="grid-item2" onclick="bounce(this)">
+  <div class="grid-container2">
+    <a href="quran.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
       <img src="quran.png" alt="Profile 1">
       <div class="name">عیبادەت</div>
     </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
       <img src="table.png" alt="Profile 2">
       <div class="name">خشتەی خوێندن</div>
     </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
       <img src="plans.png" alt="Profile 3">
       <div class="name">پلان</div>
     </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
       <img src="quotes.png" alt="Profile 4">
       <div class="name">تێبینی گرنگ</div>
     </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
       <img src="questions.png" alt="Profile 5">
       <div class="name">پرسیار</div>
     </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility()">
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
       <img src="diet.png" alt="Profile 6">
       <div class="name">ڕێجیم</div>
     </a>
@@ -214,6 +238,11 @@
   <script>
 function playSound() {
   const sound = document.getElementById("clickSound");
+  sound.currentTime = 0;
+  sound.play();
+}
+  function playSound2() {
+  const sound = document.getElementById("clickSound2");
   sound.currentTime = 0;
   sound.play();
 }
@@ -228,6 +257,12 @@ function playSound() {
     const box = document.getElementById("aler");
     if (box.style.display === "none") {
       box.style.display = "block"; // show it
+    }
+  }
+    function reverseVisibility() {
+    const box = document.getElementById("aler");
+    if (box.style.display === "block") {
+      box.style.display = "none"; // show it
     }
   }
   
