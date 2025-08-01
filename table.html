@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  .plc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    weidth: 100vw;
+  }
+
+    .upload-container {
+      background: #fff;
+      border: 3px dashed #aaa;
+      border-radius: 10px;
+      padding: 40px;
+      width: 300px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      margin-top: 60vh;
+    }
+  p {
+    font-weight: 600;
+    font-size: 2.8vh;
+  }
+
+    .upload-container.dragover {
+      background: #e0f7fa;
+      border-color: #00acc1;
+    }
+
+    #fileInput {
+      display: none;
+    }
+  #preview {
+    display: none;
+    object-fit: cover;
+  }
+    }
+    .description {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+  .advice {
+    margin-top: 15vh;
+    padding-bottom: 100px;
+    font-size: 3vh;
+    font-weight: 450;
+    direction: rtl;
+  }
+  span {
+    font-size: 4vh;
+    font-weight: 650;
+  }
+  </style>
+</head>
+<body>
+  <div class="plc">
+  <img id="preview" alt="Image preview">
+
+  <div class="plc" id="main">
+<div class="upload-container" id="dropArea">
+  <p>ئێرە دابگرە بۆ دیاریکردنی وێنە</p>
+  <input type="file" id="fileInput" accept="image/*" style="display:none;">
+  <div class="description" id="status"> !هیچ وێنەیەک دیاری نەکراوە</div>
+</div>
+  <div class="advice">
+    تکایە، لای خۆت خشتەیەک بکێشە لەسەر پەڕەیەک، دواتر وێنەی بگرە و لێرە دایبنێ 
+    <br><br> <span>چۆنیەتی خشتەکە</span> 
+    <br> -لایەک بەپێی ماددەکان ڕیز بکە و لایەکیتر بەپێی بەشی یەک و بەشی دوو
+    <br> -بۆ هەر ماددەیەک لە بەشێک چەند کەرتی هەیە ئەوەندە خانەیە درووست بکە
+    <br> -هەر کەرتێک، بە چەند وانە ڤیدیۆی مامۆستاکەت تەواو دەبێت ژمارەکە لە خانەکە بنووسە !
+    <br> -ئەگەر ژمارەی ڤیدیۆکان بۆ کەرتەکە ژمارەیەکی تەواو نەبوو ئەوا ژمارەکە بکە تەواو و موجەبی بۆ دابنێ 
+    <br>نم/ 2.5 --> 2+
+    
+  </div>
+  </div>
+  </div>
+
+<script>
+  const dropArea = document.getElementById('dropArea');
+  const fileInput = document.getElementById('fileInput');
+  const preview = document.getElementById("preview");
+  const status = document.getElementById("status");
+  const main = document.getElementById("main");
+
+  function handleFile(file) {
+      if (!file.type.startsWith("image/")) {
+        status.textContent = "Please drop a valid image file.";
+        return;
+      }
+    
+    const reader = new FileReader();
+      reader.onload = function () {
+        const base64 = reader.result;
+        localStorage.setItem("savedImage", base64);
+        preview.src = base64;
+        preview.style.display = "block";
+        main.style.display = "none";
+        status.textContent = "Image loaded and saved!";
+      };
+      reader.readAsDataURL(file);
+    }
+    
+  dropArea.addEventListener("dragover", e => {
+      e.preventDefault();
+      dropArea.classList.add("hover");
+    });
+    
+  dropArea.addEventListener("dragleave", () => {
+      dropArea.classList.remove("hover");
+    });
+    
+    dropArea.addEventListener("drop", e => {
+      e.preventDefault();
+      dropArea.classList.remove("hover");
+
+      const file = e.dataTransfer.files[0];
+      if (file) handleFile(file);
+    });
+
+    // Click to open file picker
+    dropArea.addEventListener("click", () => {
+      fileInput.click();
+    });
+
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0];
+      if (file) handleFile(file);
+    });
+
+    // Load from localStorage on startup
+    window.onload = () => {
+      const saved = localStorage.getItem("savedImage");
+      if (saved) {
+        preview.src = saved;
+        preview.style.display = "block";
+        main.style.display = "none";
+        status.textContent = "Loaded saved image.";
+      }
+    };
+  
+    
+</script>
+
+</body>
+</html>

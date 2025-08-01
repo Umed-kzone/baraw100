@@ -2,285 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Baraw100</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Intro Screen</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 10px;
-      background-color: #f4f4f4;
+      background-color: #fff;
+      height: 100vh;
+      display: flex;
       justify-content: center;
-      aling-items: center;
-      place-items: center;
+      align-items: center;
+      overflow: hidden;
     }
-  p {
-    font-weight: 900;
-    font-size: 4vh;
-    text-align: center;
-    margin-top: 2vh;
-  }
-  .by {
-    font-weight: 500;
-    font-size: 2vh;
-    margin-top: 18vh;
-    margin-left: 30vh;
-  }
-  h1 {
-    font-weight: 500;
-    font-size:3vh;
-    margin-bottom: 12vh;
-    border: solid;
-    border-radius: 0px;
-    padding: 1vh;
-  }
-  h2 {
-    font-weight: 500;
-    font-size: 2.5vh;
-    color: red;
-  }
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1vh;
-      align-items: right;
-      justify-content: right;
-      place-items: right;
+  
+    #introText {
+      color: black;
+      font-size: 3em;
+      font-weight: 700;
+      opacity: 0;
+      animation: fadeInOut 3s ease-in-out forwards;
     }
-      .grid-container2 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-         align-items: right;
-      justify-content: right;
-    }
-    .grid-item {
-      background-color: #fff;
-      border-radius: 8px;
-      text-align: center;
-      padding: 0.8vh;
-      padding-bottom: 2vh;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.1s;
-      height: 18vh;
-      width: 11.5vh;
-      margin: 0vh;
-    }
-      .grid-item2 {
-      font-size: auto;
-      background-color: #fff;
-      border-radius: 8px;
-      text-align: center;
-      padding: 1vh;
-      padding-bottom: 2.5vh;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-      transition: transform 0.1s;
-        height: 16vh;
-        width: 12vh;
-        margin: 0px;
-    }
-  /* Bounce animation keyframes */
-    @keyframes bounce {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-   .bounce {
-      animation: bounce 0.08s ease;
-    }
-    .grid-item:hover {
-      transform: scale(1.1);
-    }
-    .grid-item img {
-      width: 100%;
-      height: auto;
-      max-width: 100px;
-      border-radius: 10%;
-      border: solid;
-      margin: 0px;
-      margin-bottom: 8px;
-      border-width: 0px;
-    }
-      .grid-item2:hover {
-        border-color: red;
-        border: 1px solid;
-        box-shadow: 0px 0px 10px rgba(255,150,0,0.7);
-    }
-    .grid-item2 img {
-      width: 100%;
-      height: auto;
-      max-width: 100px;
-      border-radius: 10%;
-      margin-bottom: 8px;
-    }
-    .name {
-      font-weight: bold;
-      font-size: auto;
-    }
-    .title {
-      font-size: 1.6vh;
-      color: #666;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    @media (max-width: 70vh) {
-      .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 12vh;
-        background-color: transparent;
-        border: solid;
-        border-radius: 2vh;
-        border-color: transparent;
-        padding: 1vh;
-        box-shadow: 0px 0px 10px #bbbbbb;
-              align-items: right;
-      justify-content: right;
-        place-items: center;
-      }
-    }
-     @media (max-width: 600px) {
-      .grid-container2 {
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 12vh;
-        background-color: transparent;
-        border: solid;
-        border-radius: 2vh;
-        border-color: transparent;
-        padding: 0.6vh;
-              align-items: right;
-      justify-content: right;
-        direction: rtl;
-      }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      50% { opacity: 0.8; }
+      70% { text-shadow: 0px 0px 0px white; -webkit-text-stroke: 0px pink; }
+      80% { text-shadow: 0px 0px 15px black; -webkit-text-stroke: 2px white; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <audio id="clickSound" src="click.ogg" preload="auto"></audio>
-  <audio id="clickSound2" src="click3.wav" preload="auto"></audio>
-  <p>مامۆستایان</p>
+  <div id="introText" class="tkst">Baraw100.com</div>
 
-  <div class="grid-container">
-    <a href="https://youtube.com/playlist?list=PLNDYhMhf3Yfh6XLTONbmw8McTq90eTNSX&si=N8SCu8yjx4jYfaHf" class="grid-item" onclick="playSound2()">
-      <img src="Biology2.jpg" alt="part 1">
-      <div class="name">زیـندەزانـی</div>
-      <div class="title">م.هۆشیار حسن</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusit60ddHd4vzhW18Z4ihgXc&si=4eFXLPPQfB91pn17" class="grid-item" onclick="playSound2()">
-      <img src="Biology.jpg" alt="part 1">
-      <div class="name">زیـندەزانـی</div>
-      <div class="title">م.صـنعان حـامد</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusjK7ON-FyHGK4aAQGvjP4PW&si=iCLg3m89sHBU5-Ir" class="grid-item" onclick="playSound2()">
-      <img src="English.jpg" alt="part 2">
-      <div class="name">English <br> (Grammer)</div>
-      <div class="title">م.یـوسف ڕەسـول</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusiyQZdryTtmumu--YBYA3US&si=7dlLqCY9hQ9p2_-4" class="grid-item" onclick="playSound2()">
-      <img src="Physics.jpg" alt="part 3">
-      <div class="name">فـیزیا</div>
-      <div class="title">م.کاروان کەیـفی</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PL_9sYSyesA40RhUGaYgxZbWFB6Y1akCaN&si=d9XzheQuTYwv57UI" class="grid-item" onclick="playSound2()">
-      <img src="Physics2.jpg" alt="part 3">
-      <div class="name">فـیزیا</div>
-      <div class="title">م.شێرزاد علی</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PL3YGFJ5LaxdQNQIdwhU7apPZGOortnIL0&si=rbcsA-wb_PosLCie" class="grid-item" onclick="playSound2()">
-      <img src="English2.jpg" alt="part 5">
-      <div class="name">English <br> (Grammer)</div>
-      <div class="title">م.دڵشاد محمد</div>
-    </a>
-        <a href="https://youtube.com/playlist?list=PLFAx467JyGgn0DoWS8owiv3Li-GyQi7Uj&si=VXcGRKInqAQetvTJ" class="grid-item" onclick="playSound2()">
-      <img src="Chemistry.jpg" alt="part 4">
-      <div class="name">کـیمیا</div>
-      <div class="title">م.هـێدی حـسن</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusim-RpCn6kyE2diHBugyu7L&si=L9PK6BB7SkfZdjkK" class="grid-item" onclick="playSound2()">
-      <img src="Chemistry2.jpg" alt="part 4">
-      <div class="name">کـیمیا</div>
-      <div class="title">م.یونس عمر</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PLqibWIL7z4MsffOMQAgfndjELjTB62Xxy&si=PZ2OddEqxdfed72i" class="grid-item" onclick="playSound2()">
-      <img src="English3.jpg" alt="part 5">
-      <div class="name">English <br> (Reading)</div>
-      <div class="title">م.عـبدالقـادر</div>
-    </a>
-  </div>
-  <p>بەشەکانی‌تر</p>
-  <h2 id="aler" style="display: none;">!ببورە ئەم بەشە لەژێر دروستکردندایە *</h2>
-  <div class="grid-container2">
-    <a href="quran.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
-      <img src="quran.png" alt="Profile 1">
-      <div class="name">عیبادەت</div>
-    </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img src="table.png" alt="Profile 2">
-      <div class="name">خشتەی خوێندن</div>
-    </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img src="plans.png" alt="Profile 3">
-      <div class="name">پلان</div>
-    </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img src="quotes.png" alt="Profile 4">
-      <div class="name">تێبینی گرنگ</div>
-    </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img src="questions.png" alt="Profile 5">
-      <div class="name">پرسیار</div>
-    </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img src="diet.png" alt="Profile 6">
-      <div class="name">ڕێجیم</div>
-    </a>
-  </div>
-   <h1>...پەیج لەژێر دروستکردندایە</h1>
-  
+
   <script>
-function playSound() {
-  const sound = document.getElementById("clickSound");
-  sound.currentTime = 0;
-  sound.play();
-}
-  function playSound2() {
-  const sound = document.getElementById("clickSound2");
-  sound.currentTime = 0;
-  sound.play();
-}
-  
-  function bounce(button) {
-    button.classList.remove('bounce'); // reset animation if already applied
-    void button.offsetWidth; // force reflow (trick to restart the animation)
-    button.classList.add('bounce');
-  }
-  
-    function toggleVisibility() {
-    const box = document.getElementById("aler");
-    if (box.style.display === "none") {
-      box.style.display = "block"; // show it
-    }
-  }
-    function reverseVisibility() {
-    const box = document.getElementById("aler");
-    if (box.style.display === "block") {
-      box.style.display = "none"; // show it
-    }
-  }
-  
-  document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault(); // Stop immediate navigation
-      const url = this.href;
-      if (url) {
-      setTimeout(() => {
-        window.location.href = url; // Navigate after 1 second delay
-      }, 500);
-      }
-    });
-  });
-</script>
-  
+    // Optional: Hide the text completely after animation
+    setTimeout(() => {
+      document.getElementById("introText").style.display = "none";
+      window.location.href = "index2.html";
+    }, 5000);
+  </script>
 </body>
 </html>
