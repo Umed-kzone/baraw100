@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baraw100</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0px;
+      padding-bottom: 10px;
+      background-color: #ffffff;
+      justify-content: center;
+      aling-items: center;
+      place-items: center;
+    }
+  p {
+    font-weight: 900;
+    font-size: 4vh;
+    text-align: center;
+    margin-top: 2vh;
+    margin-bottom: 1.5vh;
+  }
+  .mts {
+    font-weight: 900;
+    font-size: 4vh;
+    text-align: center;
+    margin-top: 6vh;
+    margin-bottom: 1.5vh;
+  }
+  .by {
+    font-weight: 500;
+    font-size: 2vh;
+    margin-top: 18vh;
+    margin-left: 30vh;
+  }
+  h1 {
+    font-weight: 500;
+    font-size:3vh;
+    margin-bottom: 12vh;
+    border: solid;
+    border-radius: 0px;
+    padding: 1vh;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 2.5vh;
+    color: red;
+  }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1vh;
+      align-items: right;
+      justify-content: right;
+      place-items: right;
+    }
+      .grid-container2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1vh;
+         align-items: right;
+      justify-content: right;
+    }
+    .grid-item {
+      background-color: #fff;
+      border-radius: 8px;
+      text-align: center;
+      padding: 0.8vh;
+      padding-bottom: 2vh;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.1s;
+      height: 18vh;
+      width: 11.5vh;
+      margin: 0vh;
+    }
+      .grid-item2 {
+      font-size: 2.3vh;
+      background-color: #fff;
+      border-radius: 8px;
+      text-align: center;
+      padding: 1vh;
+      padding-bottom: 2.5vh;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+      transition: transform 0.1s;
+        height: 16vh;
+        width: 12vh;
+        margin: 0px;
+    }
+  /* Bounce animation keyframes */
+    @keyframes bounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+   .bounce {
+      animation: bounce 0.08s ease;
+    }
+    .grid-item:hover {
+      transform: scale(1.1);
+    }
+    .grid-item img {
+      width: 100%;
+      height: auto;
+      max-width: 100px;
+      border-radius: 10%;
+      border: solid;
+      margin: 0px;
+      margin-bottom: 8px;
+      border-width: 0px;
+    }
+      .grid-item2:hover {
+        border-color: red;
+        border: 1px solid;
+    }
+    .grid-item2 img {
+      width: 100%;
+      height: auto;
+      max-width: 100px;
+      border-radius: 10%;
+      margin-bottom: 8px;
+    }
+    .name {
+      font-weight: bold;
+      font-size: auto;
+    }
+    .title {
+      font-size: 1.6vh;
+      color: #666;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    @media (max-width: 70vh) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 12vh;
+        background-color: transparent;
+        border: solid;
+        border-radius: 2vh;
+        border-color: transparent;
+        padding: 1vh;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+              align-items: right;
+      justify-content: right;
+        place-items: center;
+      }
+    }
+     @media (max-width: 600px) {
+      .grid-container2 {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 12vh;
+        background-color: transparent;
+        border: solid;
+        border-radius: 2vh;
+        border-color: transparent;
+        padding: 0.6vh;
+              align-items: right;
+      justify-content: right;
+        direction: rtl;
+      }
+    }
+  .menu {
+    background-color: #fff;
+      color: black;
+      padding: 0.5vh 0%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    width: 100%;
+     text-align: center;
+    border: 1px solid #999;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  .menu .logo {
+    font-size: 20px;
+      font-weight: bold;
+    margin-left: 0vh;
+  }
+  .menu .user-name {
+    background-color: #393939;
+    color: white;
+      padding: 5px 16px;
+      border-radius: 6vh;
+      font-size: 2.4vh;
+    margin: 0px;
+    margin-right: 2%;
+    font-weight: bold;
+  }
+
+    dialog {
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+
+    dialog::backdrop {
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .pd {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .menu .mode {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 5%;
+      width: 0vh;
+      font-size: 2.2vh;
+      font-weight: 600;
+  }
+  .menu .score {
+    background-color: #eeeeee;
+    font-size: 2vh;
+      font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 6vh;
+    outline: none;
+    text-align: center;
+    justify-content: center;
+    place-items: center;
+  }
+
+  </style>
+</head>
+<body>
+  <audio id="clickSound" src="click.ogg" preload="auto"></audio>
+  <audio id="clickSound2" src="click3.wav" preload="auto"></audio>
+  
+  <div class="menu" id="menu">
+    <div>
+    <label for="color" class="mode" id="choosetheme">Theme</label>
+<select id="theme" class="score" name="color" style="border: 1px solid black; border-radius: 1vh;">
+  <option value="default">Default</option>
+  <option value="rose">Rose</option>
+  <option value="charcoal">Charcoal</option>
+</select>
+    </div>
+    <p class="logo" id="logo">Baraw 100</p>
+    <div id="wilcome" class="user-name">umed</div>
+  </div>
+  
+  <p class="mts" id="mro">مامۆستایان</p>
+
+  <div class="grid-container">
+    <a href="https://youtube.com/playlist?list=PLNDYhMhf3Yfh6XLTONbmw8McTq90eTNSX&si=N8SCu8yjx4jYfaHf" class="grid-item" onclick="playSound2()">
+      <img src="Biology2.jpg" alt="part 1">
+      <div class="name">زیـندەزانـی</div>
+      <div class="title">م.هۆشیار حسن</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusit60ddHd4vzhW18Z4ihgXc&si=4eFXLPPQfB91pn17" class="grid-item" onclick="playSound2()">
+      <img src="Biology.jpg" alt="part 1">
+      <div class="name">زیـندەزانـی</div>
+      <div class="title">م.صـنعان حـامد</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusjK7ON-FyHGK4aAQGvjP4PW&si=iCLg3m89sHBU5-Ir" class="grid-item" onclick="playSound2()">
+      <img src="English.jpg" alt="part 2">
+      <div class="name">English <br> (Grammer)</div>
+      <div class="title">م.یـوسف ڕەسـول</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusiyQZdryTtmumu--YBYA3US&si=7dlLqCY9hQ9p2_-4" class="grid-item" onclick="playSound2()">
+      <img src="Physics.jpg" alt="part 3">
+      <div class="name">فـیزیا</div>
+      <div class="title">م.کاروان کەیـفی</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PL_9sYSyesA40RhUGaYgxZbWFB6Y1akCaN&si=d9XzheQuTYwv57UI" class="grid-item" onclick="playSound2()">
+      <img src="Physics2.jpg" alt="part 3">
+      <div class="name">فـیزیا</div>
+      <div class="title">م.شێرزاد علی</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PL3YGFJ5LaxdQNQIdwhU7apPZGOortnIL0&si=rbcsA-wb_PosLCie" class="grid-item" onclick="playSound2()">
+      <img src="English2.jpg" alt="part 5">
+      <div class="name">English <br> (Grammer)</div>
+      <div class="title">م.دڵشاد محمد</div>
+    </a>
+        <a href="https://youtube.com/playlist?list=PLFAx467JyGgn0DoWS8owiv3Li-GyQi7Uj&si=VXcGRKInqAQetvTJ" class="grid-item" onclick="playSound2()">
+      <img src="Chemistry.jpg" alt="part 4">
+      <div class="name">کـیمیا</div>
+      <div class="title">م.هـێدی حـسن</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusim-RpCn6kyE2diHBugyu7L&si=L9PK6BB7SkfZdjkK" class="grid-item" onclick="playSound2()">
+      <img src="Chemistry2.jpg" alt="part 4">
+      <div class="name">کـیمیا</div>
+      <div class="title">م.یونس عمر</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLqibWIL7z4MsffOMQAgfndjELjTB62Xxy&si=PZ2OddEqxdfed72i" class="grid-item" onclick="playSound2()">
+      <img src="English3.jpg" alt="part 5">
+      <div class="name">English <br> (Reading)</div>
+      <div class="title">م.عـبدالقـادر</div>
+    </a>
+  </div>
+  <p class="mts">بەشەکانی‌تر</p>
+  <h2 id="aler" style="display: block;">!ببورە ئەم بەشە لەژێر دروستکردندایە *</h2>
+  <div class="grid-container2">
+    <a href="quran.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
+      <img src="quran.png" alt="Profile 1">
+      <div class="name">عیبادەت</div>
+    </a>
+    <a href="table.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
+      <img src="table.png" alt="Profile 2">
+      <div class="name">خشتە</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img src="plans.png" alt="Profile 3">
+      <div class="name">پلان</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img src="quotes.png" alt="Profile 4">
+      <div class="name">تێبینی گرنگ</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img src="questions.png" alt="Profile 5">
+      <div class="name">پرسیار</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img src="diet.png" alt="Profile 6">
+      <div class="name">ڕێجیم</div>
+    </a>
+  </div>
+   <h1 id="h1">...پەیج لەژێر دروستکردندایە</h1>
+  
+  
+<dialog id="loginDialog">
+  <form method="dialog" id="loginForm">
+    <h3>Please Log In</h3>
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+    <button class="pd" type="submit">Enter</button>
+  </form>
+</dialog>
+
+  
+  <script>
+  document.getElementById("theme").value = "rose";
+  const body = document.body;
+  const brat = document.getElementById("h1");
+  const drat = document.getElementById("aler");
+  const menu = document.getElementById("menu");
+  const weelcome = document.getElementById("wilcome");
+  const theme = document.getElementById("theme");
+  const chth = document.getElementById("choosetheme");
+  const logo = document.getElementById("logo");
+  const elements = document.getElementsByClassName('grid-item');
+  const elements2 = document.getElementsByClassName('grid-item2');
+  const tit = document.getElementsByClassName('mts');
+  
+  body.style.backgroundColor = "#ffaab8";
+  brat.style.color = "#ff193b";
+  drat.style.color = "#000000";
+  menu.style.backgroundColor = "#ff778e";
+  weelcome.style.backgroundColor = "#ff5974";
+  weelcome.style.color = "#ffd8de";
+  chth.style.color = "#ffd8de";
+  theme.style.backgroundColor = "#ffaab8";
+  theme.style.fontWeight = "600";
+  theme.style.color = "#ff5974";
+  logo.style.color = "#ff193b";
+  logo.style.textShadow = "0px 0px 1vh #ffd8de";
+  for (let el of elements) {
+    el.style.border = "solid";
+    el.style.borderWidth = "0.32vh";
+    el.style.borderColor = "#ff193b"
+  }
+  for (let el of elements2) {
+    el.style.border = "solid";
+    el.style.borderWidth = "0.36vh";
+    el.style.borderColor = "#ff193b";
+    el.addEventListener("mouseover", function() {
+  el.style.boxShadow = "0px 0px 2vh #ff5050";
+});
+
+el.addEventListener("mouseout", function() {
+  el.style.boxShadow = "none";
+});
+  }
+  for (let el of tit) {
+    el.style.color = "#ff193b";
+  }
+</script>
+  
+</body>
+</html>

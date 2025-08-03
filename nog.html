@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hue 300° to 360°, Desaturated by Column</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 6px;
+      width: 90vmin;
+      height: 90vmin;
+    }
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      border-radius: 6px;
+      color: #000;
+      user-select: none;
+      height: 12vh;
+      weidth: 6vh;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container" id="grid"></div>
+
+  <script>
+    const container = document.getElementById('grid');
+    const rows = 6;
+    const cols = 6;
+
+    for (let row = 0; row < rows; row++) {
+      for (let col = 0; col < cols; col++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+
+        const number = row * cols + col + 1;
+        cell.textContent = number;
+
+        // Hue from 300° (purple) to 360° (red) across row
+        const hue = 300 + (60 * col) / (cols - 1); // 300 → 360
+
+        // Saturation from 100% to 0% down the column
+        const saturation = 100 - (100 * row) / (rows - 1); // 100 → 0
+
+        const lightness = 65;
+
+        cell.style.backgroundColor = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
+        container.appendChild(cell);
+      }
+    }
+  </script>
+</body>
+</html>

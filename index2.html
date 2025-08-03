@@ -4,249 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Baraw100</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0px;
-      padding-bottom: 10px;
-      background-color: #ffffff;
-      justify-content: center;
-      aling-items: center;
-      place-items: center;
-    }
-  p {
-    font-weight: 900;
-    font-size: 4vh;
-    text-align: center;
-    margin-top: 2vh;
-    margin-bottom: 1.5vh;
-  }
-  .mts {
-    font-weight: 900;
-    font-size: 4vh;
-    text-align: center;
-    margin-top: 6vh;
-    margin-bottom: 1.5vh;
-  }
-  .by {
-    font-weight: 500;
-    font-size: 2vh;
-    margin-top: 18vh;
-    margin-left: 30vh;
-  }
-  h1 {
-    font-weight: 500;
-    font-size:3vh;
-    margin-bottom: 12vh;
-    border: solid;
-    border-radius: 0px;
-    padding: 1vh;
-  }
-  h2 {
-    font-weight: 500;
-    font-size: 2.5vh;
-    color: red;
-  }
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1vh;
-      align-items: right;
-      justify-content: right;
-      place-items: right;
-    }
-      .grid-container2 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-         align-items: right;
-      justify-content: right;
-    }
-    .grid-item {
-      background-color: #fff;
-      border-radius: 8px;
-      text-align: center;
-      padding: 0.8vh;
-      padding-bottom: 2vh;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.1s;
-      height: 18vh;
-      width: 11.5vh;
-      margin: 0vh;
-    }
-      .grid-item2 {
-      font-size: auto;
-      background-color: #fff;
-      border-radius: 8px;
-      text-align: center;
-      padding: 1vh;
-      padding-bottom: 2.5vh;
-      box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-      transition: transform 0.1s;
-        height: 16vh;
-        width: 12vh;
-        margin: 0px;
-    }
-  /* Bounce animation keyframes */
-    @keyframes bounce {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-   .bounce {
-      animation: bounce 0.08s ease;
-    }
-    .grid-item:hover {
-      transform: scale(1.1);
-    }
-    .grid-item img {
-      width: 100%;
-      height: auto;
-      max-width: 100px;
-      border-radius: 10%;
-      border: solid;
-      margin: 0px;
-      margin-bottom: 8px;
-      border-width: 0px;
-    }
-      .grid-item2:hover {
-        border-color: red;
-        border: 1px solid;
-        box-shadow: 0px 0px 10px rgba(255,150,0,0.7);
-    }
-    .grid-item2 img {
-      width: 100%;
-      height: auto;
-      max-width: 100px;
-      border-radius: 10%;
-      margin-bottom: 8px;
-    }
-    .name {
-      font-weight: bold;
-      font-size: auto;
-    }
-    .title {
-      font-size: 1.6vh;
-      color: #666;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    @media (max-width: 70vh) {
-      .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 12vh;
-        background-color: transparent;
-        border: solid;
-        border-radius: 2vh;
-        border-color: transparent;
-        padding: 1vh;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-              align-items: right;
-      justify-content: right;
-        place-items: center;
-      }
-    }
-     @media (max-width: 600px) {
-      .grid-container2 {
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 12vh;
-        background-color: transparent;
-        border: solid;
-        border-radius: 2vh;
-        border-color: transparent;
-        padding: 0.6vh;
-              align-items: right;
-      justify-content: right;
-        direction: rtl;
-      }
-    }
-  .menu {
-    background-color: #fff;
-      color: black;
-      padding: 0.5vh 0%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    width: 100%;
-     text-align: center;
-    border: 1px solid #999;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  }
-  .menu .logo {
-    font-size: 20px;
-      font-weight: bold;
-    margin-left: 0vh;
-  }
-  .menu .score {
-    background-color: #eeeeee;
-    font-size: 2.2vh;
-      font-weight: normal;
-    margin: 0px;
-      margin-left: 2%;
-    padding: 0px;
-    padding: 5px 10px;
-    border-radius: 6vh;
-  }
-  .menu .user-name {
-    background-color: #393939;
-    color: white;
-      padding: 5px 16px;
-      border-radius: 6vh;
-      font-size: 2.4vh;
-    margin: 0px;
-    margin-right: 2%;
-    font-weight: bold;
-  }
-
-    dialog {
-      border: none;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      width: 300px;
-    }
-
-    dialog::backdrop {
-      background: rgba(0, 0, 0, 0.3);
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-    }
-
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .pd {
-      margin-top: 15px;
-      padding: 10px;
-      width: 100%;
-      background-color: #333;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <audio id="clickSound" src="click.ogg" preload="auto"></audio>
   <audio id="clickSound2" src="click3.wav" preload="auto"></audio>
   
-  <div class="menu">
-    <div class="score">Score: 0</div>
-    <p class="logo">Baraw 100</p>
-    <div id="wilcome" class="user-name"></div>
+  <div class="menu" id="menu">
+    <div>
+    <label for="color" class="mode" id="choosetheme">Theme</label>
+<select id="theme" class="score" name="color" style="border: 1px solid black; border-radius: 1vh;">
+  <option value="default">Default</option>
+  <option value="rose">Rose</option>
+  <option value="charcoal">Charcoal</option>
+</select>
+    </div>
+    <p class="logo" id="logo">Baraw 100</p>
+    <div id="wilcome" class="user-name">umed</div>
   </div>
   
   <p class="mts" id="mro">مامۆستایان</p>
@@ -307,7 +81,7 @@
     </a>
     <a href="table.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
       <img src="table.png" alt="Profile 2">
-      <div class="name">خشتەی وانەکان</div>
+      <div class="name">خشتە</div>
     </a>
     <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
       <img src="plans.png" alt="Profile 3">
@@ -326,7 +100,7 @@
       <div class="name">ڕێجیم</div>
     </a>
   </div>
-   <h1>...پەیج لەژێر دروستکردندایە</h1>
+   <h1 id="h1">...پەیج لەژێر دروستکردندایە</h1>
   
   
 <dialog id="loginDialog">
@@ -339,74 +113,7 @@
 </dialog>
 
   
-  <script>
-function playSound() {
-  const sound = document.getElementById("clickSound");
-  sound.currentTime = 0;
-  sound.play();
-}
-  function playSound2() {
-  const sound = document.getElementById("clickSound2");
-  sound.currentTime = 0;
-  sound.play();
-}
-  
-  function bounce(button) {
-    button.classList.remove('bounce'); // reset animation if already applied
-    void button.offsetWidth; // force reflow (trick to restart the animation)
-    button.classList.add('bounce');
-  }
-  
-    function toggleVisibility() {
-    const box = document.getElementById("aler");
-    if (box.style.display === "none") {
-      box.style.display = "block"; // show it
-    }
-  }
-    function reverseVisibility() {
-    const box = document.getElementById("aler");
-    if (box.style.display === "block") {
-      box.style.display = "none"; // show it
-    }
-  }
-  
-  document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function(event) {
-      event.preventDefault(); // Stop immediate navigation
-      const url = this.href;
-      if (url) {
-      setTimeout(() => {
-        window.location.href = url; // Navigate after 1 second delay
-      }, 500);
-      }
-    });
-  });
- const dialog = document.getElementById('loginDialog');
-  const form = document.getElementById('loginForm');
-  const weelcome = document.getElementById('wilcome');
-
-  // Check if username exists
-  const savedUsername = localStorage.getItem('username');
-  if (!savedUsername) {
-    dialog.showModal();
-  } else {
-    weelcome.textContent = savedUsername;
-  }
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = form.username.value.trim();
-    
-    if (username) {
-      localStorage.setItem('username', username);
-      dialog.close();
-      weelcome.textContent = username;
-    } else {
-      alert("تکایە ناوت تۆمار بکە !");
-    }
-  });
-  
-</script>
+  <script src="javascript.js"></script>
   
 </body>
 </html>
