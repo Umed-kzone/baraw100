@@ -81,14 +81,14 @@ function defaulted() {
   drat.style.color = "#ff0000";
   drat.style.fontWeight = "500";
   menu.style.backgroundColor = "#fff";
-  weelcome.style.backgroundColor = "#393939";
-  weelcome.style.color = "#ffffff";
+  weelcome.style.backgroundColor = "#ececec";
+  weelcome.style.color = "#000000";
   chth.style.color = "#000000";
   theme.style.backgroundColor = "#eeeeee";
   theme.style.fontWeight = "500";
   theme.style.color = "#000000";
   logo.style.color = "#000000";
-  logo.style.textShadow = "1px 2px 0.5vh #999999";
+  logo.style.textShadow = "2px 2px 0.25vh #aaa";
   for (let el of elements) {
     el.style.border = "none";
     el.style.backgroundColor = "#fff";
@@ -112,7 +112,7 @@ el.addEventListener("mouseout", function() {
     el.style.color = "#000000";
   }
   for (let el of sub) {
-    el.style.color = "#ffaa00";
+    el.style.color = "#666";
   }
 }
 
@@ -187,11 +187,11 @@ function coaled() {
     el.style.border = "solid";
     el.style.borderWidth = "0.2vh";
     el.style.borderColor = "#999999";
-    el.style.backgroundColor ="#000000";
+    el.style.backgroundColor ="#1e1e1e";
     el.style.color ="#ffffff";
     el.addEventListener("mouseover", function() {
   el.style.boxShadow = "0px 0px 10px #ff8b00";
-     el.style.border = "solid 1px #ffaa00"; 
+     el.style.border = "solid 1px #ffee44"; 
 });
 
 el.addEventListener("mouseout", function() {

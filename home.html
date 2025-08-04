@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baraw100</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="clickSound" src="click.ogg" preload="auto"></audio>
+  <audio id="clickSound2" src="click3.wav" preload="auto"></audio>
+  
+  <div class="menu" id="menu">
+    <div>
+    <label for="color" class="mode" id="choosetheme">Theme</label>
+<select id="theme" class="score" name="color" onclick="playSound(), bounce(this)" style="border: 1px solid black; border-radius: 1vh;">
+  <option value="default" style="background-color: white; color: #000000;">Default</option>
+  <option value="rose" style="background-color: #ffaab8; color: #ff193b;">Rose</option>
+  <option value="charcoal" style="background-color: #2d2d2d; color: #ffbb00;">Charcoal</option>
+</select>
+    </div>
+    <p class="logo" id="logo">Baraw 100</p>
+    <div id="wilcome" class="user-name"></div>
+  </div>
+  
+  <p class="mts" id="mro">مامۆستایان</p>
+
+  <div class="grid-container">
+    <a href="https://youtube.com/playlist?list=PLNDYhMhf3Yfh6XLTONbmw8McTq90eTNSX&si=N8SCu8yjx4jYfaHf" class="grid-item" onclick="playSound2()">
+      <img src="Biology2.jpg" alt="part 1">
+      <div class="name">زیـندەزانـی</div>
+      <div class="title">م.هۆشیار حسن</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusit60ddHd4vzhW18Z4ihgXc&si=4eFXLPPQfB91pn17" class="grid-item" onclick="playSound2()">
+      <img src="Biology.jpg" alt="part 1">
+      <div class="name">زیـندەزانـی</div>
+      <div class="title">م.صـنعان حـامد</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusjK7ON-FyHGK4aAQGvjP4PW&si=iCLg3m89sHBU5-Ir" class="grid-item" onclick="playSound2()">
+      <img src="English.jpg" alt="part 2">
+      <div class="name">English <br> (Grammer)</div>
+      <div class="title">م.یـوسف ڕەسـول</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusiyQZdryTtmumu--YBYA3US&si=7dlLqCY9hQ9p2_-4" class="grid-item" onclick="playSound2()">
+      <img src="Physics.jpg" alt="part 3">
+      <div class="name">فـیزیا</div>
+      <div class="title">م.کاروان کەیـفی</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PL_9sYSyesA40RhUGaYgxZbWFB6Y1akCaN&si=d9XzheQuTYwv57UI" class="grid-item" onclick="playSound2()">
+      <img src="Physics2.jpg" alt="part 3">
+      <div class="name">فـیزیا</div>
+      <div class="title">م.شێرزاد علی</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PL3YGFJ5LaxdQNQIdwhU7apPZGOortnIL0&si=rbcsA-wb_PosLCie" class="grid-item" onclick="playSound2()">
+      <img src="English2.jpg" alt="part 5">
+      <div class="name">English <br> (Grammer)</div>
+      <div class="title">م.دڵشاد محمد</div>
+    </a>
+        <a href="https://youtube.com/playlist?list=PLFAx467JyGgn0DoWS8owiv3Li-GyQi7Uj&si=VXcGRKInqAQetvTJ" class="grid-item" onclick="playSound2()">
+      <img src="Chemistry.jpg" alt="part 4">
+      <div class="name">کـیمیا</div>
+      <div class="title">م.هـێدی حـسن</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusim-RpCn6kyE2diHBugyu7L&si=L9PK6BB7SkfZdjkK" class="grid-item" onclick="playSound2()">
+      <img src="Chemistry2.jpg" alt="part 4">
+      <div class="name">کـیمیا</div>
+      <div class="title">م.یونس عمر</div>
+    </a>
+    <a href="https://youtube.com/playlist?list=PLqibWIL7z4MsffOMQAgfndjELjTB62Xxy&si=PZ2OddEqxdfed72i" class="grid-item" onclick="playSound2()">
+      <img src="English3.jpg" alt="part 5">
+      <div class="name">English <br> (Reading)</div>
+      <div class="title">م.عـبدالقـادر</div>
+    </a>
+  </div>
+  <p class="mts">بەشەکانی‌تر</p>
+  <h2 id="aler" style="display: none;">!ببورە ئەم بەشە لەژێر دروستکردندایە *</h2>
+  <div class="grid-container2">
+    <a href="quran.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
+      <img src="quran.png" alt="Profile 1">
+      <div class="name">عیبادەت</div>
+    </a>
+    <a href="table.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
+      <img src="table.png" alt="Profile 2">
+      <div class="name">خشتە</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img src="plans.png" alt="Profile 3">
+      <div class="name">پلان</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img src="quotes.png" alt="Profile 4">
+      <div class="name">تێبینی گرنگ</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img src="questions.png" alt="Profile 5">
+      <div class="name">پرسیار</div>
+    </a>
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img src="diet.png" alt="Profile 6">
+      <div class="name">ڕێجیم</div>
+    </a>
+  </div>
+   <h1 id="h1">...پەیج لەژێر دروستکردندایە</h1>
+  
+  
+<dialog id="loginDialog">
+  <form method="dialog" id="loginForm">
+    <h3>Please Log In</h3>
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+    <button class="pd" type="submit">Enter</button>
+  </form>
+</dialog>
+
+  
+  <script src="javascript.js"></script>
+  
+</body>
+</html>

@@ -55,6 +55,8 @@
       gap: 1vh;
          align-items: right;
       justify-content: right;
+      place-items: right;
+      direction: rtl;
     }
     .grid-item {
       background-color: #fff;
@@ -186,17 +188,17 @@
       font-weight: normal;
     margin: 0px;
     padding: 0px;
-    border-radius: 6vh;
+    border-radius: 1vh;
        outline: none;
        text-align: center;
     justify-content: center;
     place-items: center;
   }
   .menu .user-name {
-    background-color: #393939;
-    color: #ffffff;
-      padding: 1vh 2vh;
-      border-radius: 0.5vh;
+    background-color: #ececec;
+    color: #000000;
+      padding: 1vh 2.5vh;
+      border-radius: 4vh;
       font-size: 2.4vh;
     margin: 0px;
     margin-right: 2%;
