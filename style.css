@@ -238,6 +238,17 @@
       color: white;
       border: none;
       border-radius: 5px;
-      cursor: pointer;
     }
+a {
+  outline: none;          /* Removes focus outline */
+  -webkit-tap-highlight-color: transparent; /* Removes tap highlight on mobile */
+}
 
+a:focus {
+  outline: none;
+}
+
+a:active {
+  color: inherit;         /* Optional: Prevent color change on click */
+  background: transparent; /* Optional: Prevent background change */
+}
