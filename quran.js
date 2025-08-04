@@ -21,7 +21,24 @@ function bounce(button) {
         window.history.back();
       }, 500);
     }
-
+  for (let el of play) {
+el.addEventListener("click", function() {
+    sound.currentTime = 0;
+    sound.play();
+    el.classList.remove('bounce'); // reset animation if already applied
+    void el.offsetWidth; // force reflow (trick to restart the animation)
+    el.classList.add('bounce');
+});
+  }
+for (let el of read) {
+el.addEventListener("click", function() {
+    sound.currentTime = 0;
+    sound.play();
+    el.classList.remove('bounce'); // reset animation if already applied
+    void el.offsetWidth; // force reflow (trick to restart the animation)
+    el.classList.add('bounce');
+});
+  }
 
 function defaulted() {
 
@@ -51,12 +68,10 @@ function defaulted() {
   el.style.border = "solid 0.5vh #ffaab8";
   el.style.fontWeight = "600";
     el.addEventListener("mouseover", function() {
-  el.style.boxShadow = "0px 0px 2vh rgba(255, 0, 60, 1)";
       el.style.border = "solid 0.36vh #ff0044";
       
 });
     el.addEventListener("mouseout", function() {
-  el.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.2)";
   el.style.border = "solid 0.36vh #ffaab8";
 });
   }
@@ -66,11 +81,9 @@ function defaulted() {
   el.style.border = "solid 0.5vh #ffaab8";
   el.style.fontWeight = "600";
     el.addEventListener("mouseover", function() {
-  el.style.boxShadow = "0px 0px 2vh rgba(255, 0, 60, 1)";
       el.style.border = "solid 0.36vh #ff0044";     
   });
     el.addEventListener("mouseout", function() {
-  el.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.2)";
   el.style.border = "solid 0.36vh #ffaab8";     
 });
   }
@@ -99,11 +112,9 @@ function defaulted() {
   el.style.border = "solid 0.2vh #999999";
   el.style.fontWeight = "400";
    el.addEventListener("mouseover", function() {
-  el.style.boxShadow = "0px 0px 1vh #ff8b00";
      el.style.border = "solid 1px #ffaa00"; 
 });
    el.addEventListener("mouseout", function() {
-  el.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.2)";
   el.style.border = "solid 0.2vh #999999";
 });
   }
@@ -113,11 +124,9 @@ function defaulted() {
   el.style.border = "solid 0.2vh #999999";
   el.style.fontWeight = "400";
    el.addEventListener("mouseover", function() {
-  el.style.boxShadow = "0px 0px 1vh #ff8b00";
      el.style.border = "solid 1px #ffaa00"; 
 });
    el.addEventListener("mouseout", function() {
-  el.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.2)";
   el.style.border = "solid 0.2vh #999999";
 });
   }
