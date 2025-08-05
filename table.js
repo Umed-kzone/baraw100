@@ -14,7 +14,7 @@ const ag = document.getElementById('agree');
 const disag = document.getElementById('disagree');
 const dbox = document.getElementById('dia');
 const dm = document.getElementById('d-messenge');
-
+const nklo = document.getElementById('nklo');
 
 function bounce(button) {
     button.classList.remove('bounce'); // reset animation if already applied
@@ -40,10 +40,10 @@ function goBack() {
     
     const reader = new FileReader();
       reader.onload = function () {
-        const base64 = reader.result;
-        localStorage.setItem("savedImage", base64);
-        preview.src = base64;
+        preview.src = "example.jpg";
         preview.style.display = "block";
+          nklo.style.display = "block";
+          nklo.style.color = "black";
         plc.style.display = "block";
         remover.style.display = "block";
         main.style.display = "none";
