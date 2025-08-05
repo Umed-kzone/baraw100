@@ -177,7 +177,7 @@
 .menu .mode {
     padding: 0px;
     margin: 0px;
-    margin-left: 5%;
+    margin-right: 5%;
       width: 0vh;
       font-size: 2.2vh;
       font-weight: 600;
@@ -197,11 +197,11 @@
   .menu .user-name {
     background-color: #ececec;
     color: #000000;
-      padding: 1vh 2.5vh;
+      padding: 0.3rem 1.2rem;
       border-radius: 4vh;
       font-size: 2.4vh;
     margin: 0px;
-    margin-right: 2%;
+    margin-left: 2%;
     font-weight: bold;
   }
 

@@ -11,6 +11,8 @@
   <audio id="clickSound2" src="click3.wav" preload="auto"></audio>
   
   <div class="menu" id="menu">
+        <div id="wilcome" class="user-name"></div>
+        <p class="logo" id="logo">Baraw 100</p>
     <div>
     <label for="color" class="mode" id="choosetheme">Theme</label>
 <select id="theme" class="score" name="color" onclick="playSound(), bounce(this)" style="border: 1px solid black; border-radius: 1vh;">
@@ -19,8 +21,6 @@
   <option value="charcoal" style="background-color: #2d2d2d; color: #ffbb00;">Charcoal</option>
 </select>
     </div>
-    <p class="logo" id="logo">Baraw 100</p>
-    <div id="wilcome" class="user-name"></div>
   </div>
   
   <p class="mts" id="mro">مامۆستایان</p>
@@ -83,7 +83,7 @@
       <img src="table.png" alt="Profile 2">
       <div class="name">خشتە</div>
     </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+    <a href="plans.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
       <img src="plans.png" alt="Profile 3">
       <div class="name">پلان</div>
     </a>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>plans</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f4f8;
+      color: #333;
+    }
+  
+    .menu {
+       height: 7vh;
+    background-color: #fff;
+      color: black;
+      padding: 0.5vh 0%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    width: 100%;
+     text-align: center;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+    .menu .back {
+    background-color: #eeeeee;
+    font-size: 2.4vh;
+      font-weight: 700;
+    margin: 0px;
+       margin-left: 2%;
+       padding: 0.75vh 2.5vh;
+       border: solid 0.25vh black;
+       border-radius: 4vh;
+  }
+  
+@keyframes bounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  
+   .bounce {
+      animation: bounce 0.08s ease;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.6rem;
+      padding: 1.5rem;
+      display: none;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 0px 8px rgba(0,0,0,0.05);
+      padding: 1rem;
+      padding-top: 0.5rem;
+      transition: transform 0.2s;
+      direction: rtl;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+      color: #4f46e5;
+      font-weight: 750;
+    }
+
+    .card ul {
+      list-style: disc;
+      padding: 1.3rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+  
+  container2 {
+    display: none;
+  }
+  
+  @keyframes shake {
+  0% { transform: translateX(0); text-shadow: 0px 0px 0rem red; }
+  15% { transform: translateX(-2px); }
+  30% { transform: translateX(4px); }
+  45% { transform: translateX(-6px); }
+  60% { transform: translateX(6px); text-shadow: 0px 0px 0.5rem red;}
+  75% { transform: translateX(-4px); }
+  90% { transform: translateX(2px); }
+  100% { transform: translateX(0); text-shadow: 0px 0px 0.1rem red;}
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+  .shake::placeholder {
+      color: red;
+  }
+
+     #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 999;
+    }
+
+    #activationDialog {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      width: 75%;
+      max-width: 400px;
+      z-index: 1000;
+      text-align: center;
+    }
+
+    #activationDialog h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 0.2rem solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+      outline: none;
+      direction: rtl;
+    }
+
+    .yock {
+      background-color: #4CAF50;
+      color: white;
+      padding: 0.45rem 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      width: 100%;
+      margin: 0.3rem;
+    }
+
+    .yock:hover {
+      background-color: #45a049;
+    }
+  
+      .bock {
+      background-color: #ffffff;
+      border: solid 0.2rem #ee3030;
+      color: #ee3030;
+      padding: 0.4rem 0.5rem;
+      border-radius: 0.5rem;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      width: 100%;
+      margin: 0.2rem;
+        margin-top: 0.5rem;
+    }
+
+    .bock:hover {
+      background-color: #ee3030;
+      color: white;
+    }
+
+    #status {
+      margin-bottom: 1.4rem;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+  
+  </style>
+</head>
+<body>
+      <audio id="clickSound" src="click.ogg" preload="auto"></audio>
+      <audio id="clickSound2" src="intro.wav" preload="auto"></audio>
+    <div class="menu" id="menu">
+    <button class="back" id="back" onclick="bounce(this), goBack()">back</button>
+  </div>
+
+  <div class="container" id="cnt1">
+
+    <div class="card">
+      <h2 class="bog">پلانی گشتی</h2>
+      <ul>
+        <li>ئامانج بەدەستهێنانی نمرەی تەواوە</li>
+        <li>دوو بەش لە هەریەک لە وانەکان تەواو دەکرێت</li>
+        <li>بە ڤیدیۆ و بە مەلزەمە تێگەیشتن بە وردی</li>
+        <li>بە پێی تێگەیشتن شتەکان لە دەفتەر دەنوسرێت</li>
+        <li>گەر لە ڕۆژێکی دیاریکراو بەندێک کۆتایی پێ بێت ئەوا ڕۆژی دوای ئەو بۆ پێداچوونەوەی ئەو بەندە دادەنرێت و پلانی ڕۆژانە جێبەجێ ناکرێت</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="bog">پلانی ڕۆژانە</h2>
+      <ul>
+        <li>چوار وانەی ڤیدیۆیی تەواو دەکرێت</li>
+        <li>پێداچوونەوەی ئەو چوار وانەی لە ڕۆژەکەدا خوێنراوە، لەکۆتایی ڕۆژەکەدا، لەسەر دەفتەر</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 class="bog">پلانی هەفتانە</h2>
+      <ul>
+        <li>پێداچوونەوەی هەموو ئەوەی لە هەفتەکەدا خوێنراوە، لەکۆتایی هەفتەدا، لەسەر دەفتەر</li>
+      </ul>
+    </div>
+    
+        <div class="card">
+      <h2 class="bog">پێداچوونەوەی بەند</h2>
+      <ul>
+        <li>پێداچوونەوە دەکرێت بۆ بەندێکی تەواوکراو لەسەر دەفتەر و لەسەر مەلزەمە</li>
+        <li>حەلکردنی هەموو پرسیارەکانی ئەو بەندە لە مەلزەمە و هەڵبژاردن</li>
+      </ul>
+    </div>
+  </div>
+  <div class="container2" id="cnt2">
+<div id="overlay"></div>
+
+<div id="activationDialog">
+  <h3 id="brk">کۆدی داخڵ بوون دابنێ بۆ ئەوەی مافی چوونە ژوورەوەت چاڵاک بکەیت</h3>
+   <div id="status"></div>
+  <input type="text" id="codeInput" placeholder="کۆدی داخڵ بوون بنووسە">
+  <button class="yock" id="bbe" onclick="checkCode(), bounce(this), playsound()">چالاککردن</button>
+  <button class="bock" id="nabe" onclick="bounce(this), goBack()">گەڕانەوە</button>
+</div>
+  </div>
+  <script src="plans.js"></script>
+</body>
+</html>

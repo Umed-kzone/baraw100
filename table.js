@@ -129,7 +129,7 @@ function pinkened() {
 function coaled() {
   body.style.backgroundColor = "#2d2d2d";
   body.style.color = "#ffffff";
-   menu.style.backgroundColor = "#2d2d2d";
+   menu.style.backgroundColor = "#1e1e1e";
    back.style.backgroundColor = "#000000";
     back.style.color = "#ffffff";
     back.style.borderColor = "#ffffff";

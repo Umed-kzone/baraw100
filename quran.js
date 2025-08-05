@@ -93,10 +93,10 @@ function defaulted() {
  function coaled() {
   body.style.backgroundColor = "#2d2d2d";
   body.style.color = "#ffffff";
-   menu.style.backgroundColor = "#2d2d2d";
+   menu.style.backgroundColor = "#1e1e1e";
    back.style.backgroundColor = "#000000";
     back.style.color = "#ffffff";
-    back.style.borderColor = "#ffffff"
+    back.style.borderColor = "#ffffff";
    title.style.textShadow = "0px 0px 1vh #ffaa00";
   for (let el of container) {
   el.style.backgroundColor = "#1e1e1e";
