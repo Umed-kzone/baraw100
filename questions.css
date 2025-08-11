@@ -1,0 +1,138 @@
+       body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f4f8;
+      color: #333;
+      width: 100%;
+      direction: rtl;
+             align-items: center;
+             align-content: center;
+        }
+            .menu {
+       height: 7vh;
+    background-color: #fff;
+      color: black;
+      padding: 0.5vh 0%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    width: 100%;
+     text-align: center;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    direction: ltr;
+  }
+  
+    .menu .back {
+    background-color: #eeeeee;
+    font-size: 2.4vh;
+      font-weight: 700;
+      margin: 0px;
+       margin-left: 2%;
+       padding: 0.75vh 2.5vh;
+       border: solid 0.25vh black;
+       border-radius: 4vh;
+  }
+  
+@keyframes bounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  
+   .bounce {
+      animation: bounce 0.08s ease;
+    }
+
+  @keyframes shake {
+  0% { transform: translateX(0); text-shadow: 0px 0px 0rem red; }
+  15% { transform: translateX(-2px); }
+  30% { transform: translateX(4px); }
+  45% { transform: translateX(-6px); }
+  60% { transform: translateX(6px); text-shadow: 0px 0px 0.5rem red;}
+  75% { transform: translateX(-4px); }
+  90% { transform: translateX(2px); }
+  100% { transform: translateX(0); text-shadow: 0px 0px 0.1rem red; }
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+  .shake::placeholder {
+      color: red;
+  }
+
+        h1 {
+            text-align: center;
+              margin-top: 5rem;
+        }
+        #commentForm {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 22rem;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+              justify-content: center;
+              align-items: center;
+              place-items: center;
+              place-content: center;
+              text-align: center;
+        }
+        input, textarea, .submit {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .submit {
+            background: #28a745;
+            color: white;
+              font-weight: 600;
+            border: none;
+        }
+        .submit:hover {
+            background: #218838;
+        }
+        #comments {
+            margin-top: 5rem;
+            max-width: 22rem;
+            margin-left: auto;
+            margin-right: auto;
+              
+        }
+        .comment {
+            background: white;
+            padding: 10px;
+            padding-top: 5px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+              transition: transform 0.2s ease;
+        }
+        .nm {
+              border-radius: 1rem;
+              padding: 0.2rem 0.8rem;
+              height: 1.5rem;
+              width: fit-content;
+              min-width: 2rem;
+              max-width: 25rem;
+              text-align: center;
+              justify-content: center;
+              align-content: center;
+              background-color: #ececec;
+        }
+        .comment:hover {
+              transform: scale(1.08);
+        }
+        .ms {
+           font-size: 1rem;
+              font-weight: 500;
+        }
+        .tm {
+              color: grey;
+              font-size: 0.7rem;
+              font-weight: 350;
+        }

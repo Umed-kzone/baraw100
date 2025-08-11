@@ -11,7 +11,7 @@
   <audio id="clickSound2" src="click3.wav" preload="auto"></audio>
   
   <div class="menu" id="menu">
-        <div id="wilcome" class="user-name"></div>
+        <div onclick="playSound(), bounce(this), showme(), reno()" id="wilcome" class="user-name"></div>
         <p class="logo" id="logo">Baraw 100</p>
     <div>
     <label for="color" class="mode" id="choosetheme">Theme</label>
@@ -87,28 +87,29 @@
       <img src="plans.png" alt="Profile 3">
       <div class="name">پلان</div>
     </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img src="quotes.png" alt="Profile 4">
+    <a class="grid-item2"onclick="bounce(this), toggleVisibility(), playSound()">
+      <img  style="background-color: #ddd;" src="notes.png" alt="Profile 4">
       <div class="name">تێبینی گرنگ</div>
     </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+    <a href="questions.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
       <img src="questions.png" alt="Profile 5">
       <div class="name">پرسیار</div>
     </a>
     <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img src="diet.png" alt="Profile 6">
+      <img  style="background-color: #ddd;" src="diet.png" alt="Profile 6">
       <div class="name">ڕێجیم</div>
     </a>
   </div>
-   <h1 id="h1">...پەیج لەژێر دروستکردندایە</h1>
-  
+
   
 <dialog id="loginDialog">
   <form method="dialog" id="loginForm">
-    <h3>Please Log In</h3>
+    <h3 id="niss">Change your name !</h3>
     <label for="username">Username:</label>
-    <input type="text" id="username" required>
-    <button class="pd" type="submit">Enter</button>
+    <input type="text" placeholder="ناوت لێرە بنووسە" id="username">
+    <p class="moos"><strong>تێبینی !</strong><br> ئەم ناوە شاراوەیە و تەنها خودی بەکارهێنەر ناوەکە دەبینێت</p>
+    <button class="pd" id="chane" type="submit" onclick="playSound(), bounce(this)">Enter</button>
+    <button class="pd" id="chame" type="button" onclick="playSound(), bounce(this), showles()">Close</button>
   </form>
 </dialog>
 

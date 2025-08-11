@@ -187,7 +187,7 @@ const correctCode = "brw100"; // Set your desired activation code here
         if (input === "") {
       status.textContent = "تکایە کۆدێک بنووسە ";
       status.style.color = "red";
-            document.getElementById("codeInput").classList.add('shake');
+      document.getElementById("codeInput").classList.add('shake');
 
     // Remove class after animation ends so it can be triggered again
     document.getElementById("codeInput").addEventListener('animationend', () => {

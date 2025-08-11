@@ -1,3 +1,18 @@
+const body = document.body;
+  const drat = document.getElementById("aler");
+  const menu = document.getElementById("menu");
+  const theme = document.getElementById("theme");
+  const chth = document.getElementById("choosetheme");
+  const logo = document.getElementById("logo");
+  const elements = document.getElementsByClassName('grid-item');
+  const elements2 = document.getElementsByClassName('grid-item2');
+  const tit = document.getElementsByClassName('mts');
+  const sub = document.getElementsByClassName('title');
+  const ba = document.getElementById("chane");
+  const bd = document.getElementById("chame");
+  const hed = document.getElementById("niss");
+
+
 function playSound() {
   const sound = document.getElementById("clickSound");
   sound.currentTime = 0;
@@ -43,10 +58,24 @@ function playSound() {
   const form = document.getElementById('loginForm');
   const weelcome = document.getElementById('wilcome');
 
+  function reno() {
+    bd.style.display = "block";
+    document.getElementById("niss").textContent = "Change your name !"
+  }
+  function showme() {
+    dialog.showModal();
+  }
+
+  function showles() {
+    dialog.close();
+  }
+
   // Check if username exists
   const savedUsername = localStorage.getItem('username');
   if (!savedUsername) {
-    dialog.showModal();
+    document.getElementById("niss").textContent = "Login please !"
+    bd.style.display = "none";
+    showme();
   } else {
     weelcome.textContent = savedUsername;
   }
@@ -57,32 +86,25 @@ function playSound() {
     
     if (username) {
       localStorage.setItem('username', username);
-      dialog.close();
+      showles();
       weelcome.textContent = username;
-    } else {
-      alert("تکایە ناوت تۆمار بکە !");
+      } else {
+      document.getElementById("username").classList.add('shake');
+      document.getElementById("username").addEventListener('animationend', () => {
+      document.getElementById("username").classList.remove('shake');
+      }, { once: true });
     }
   });
-  const body = document.body;
-  const brat = document.getElementById("h1");
-  const drat = document.getElementById("aler");
-  const menu = document.getElementById("menu");
-  const theme = document.getElementById("theme");
-  const chth = document.getElementById("choosetheme");
-  const logo = document.getElementById("logo");
-  const elements = document.getElementsByClassName('grid-item');
-  const elements2 = document.getElementsByClassName('grid-item2');
-  const tit = document.getElementsByClassName('mts');
-  const sub = document.getElementsByClassName('title');
+
 
 function defaulted() {
   body.style.backgroundColor = "#ffffff";
-  brat.style.color = "#000000";
   drat.style.color = "#ff0000";
   drat.style.fontWeight = "500";
   menu.style.backgroundColor = "#fff";
   weelcome.style.backgroundColor = "#ececec";
   weelcome.style.color = "#000000";
+  weelcome.style.border = "solid 0.1rem black"
   chth.style.color = "#000000";
   theme.style.backgroundColor = "#eeeeee";
   theme.style.fontWeight = "500";
@@ -118,12 +140,12 @@ el.addEventListener("mouseout", function() {
 
 function pinkened() {
   body.style.backgroundColor = "#ffaab8";
-  brat.style.color = "#ff193b";
   drat.style.color = "#000000";
   drat.style.fontWeight = "600";
   menu.style.backgroundColor = "#ff778e";
-  weelcome.style.backgroundColor = "#ff5974";
-  weelcome.style.color = "#ffd8de";
+  weelcome.style.backgroundColor = "#ffaab8";
+  weelcome.style.color = "#ff4c6a";
+  weelcome.style.border = "solid 0.2rem #ff4c6a"
   chth.style.color = "#ffd8de";
   theme.style.backgroundColor = "#ffaab8";
   theme.style.fontWeight = "600";
@@ -164,12 +186,12 @@ el.addEventListener("mouseout", function() {
 
 function coaled() {
   body.style.backgroundColor = "#2d2d2d";
-  brat.style.color = "#ffaa00";
   drat.style.color = "#00ccff";
   drat.style.fontWeight = "500";
   menu.style.backgroundColor = "#000000";
   weelcome.style.backgroundColor = "#3b3b3b";
   weelcome.style.color = "#ffffff";
+  weelcome.style.border = "solid 0.1rem #aaa"
   chth.style.color = "#bbbbbb";
   theme.style.backgroundColor = "#2d2d2d";
   theme.style.fontWeight = "400";
@@ -224,6 +246,14 @@ el.addEventListener("mouseout", function() {
     if (savedtheme === "default") {
       defaulted();
     }
+  }
+
+
+  const savedId = localStorage.getItem('id');
+  if (!savedId) {
+    let randomInt = Math.floor((Math.random() * 9000) + 1000);
+    const id = randomInt;
+      localStorage.setItem('id', id);
   }
 
 
