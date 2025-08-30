@@ -147,12 +147,12 @@ function bounce(button) {
     nami.style.backgroundColor = "#ffaab8";
     nami.style.color = "#ff193b";
     nami.style.border = "solid 0.35vh #ff4c6a";
-    nami.style.borderRadius = "0.9rem";
+    nami.style.borderRadius = "2vh";
     nami.style.fontWeight = "600";
     messi.style.backgroundColor = "#ffaab8";
     messi.style.color = "#ff193b";
     messi.style.border = "solid 0.35vh #ff4c6a";
-    messi.style.borderRadius = "0.9rem";
+    messi.style.borderRadius = "2vh";
     messi.style.fontWeight = "600";
        nami.addEventListener("mouseover", function() {
       nami.style.border = "solid 0.36vh #ff0044";     
@@ -193,12 +193,12 @@ document.head.appendChild(style);
     nami.style.backgroundColor = "#1e1e1e";
     nami.style.color = "#ffbb00";
     nami.style.border = "solid 0.2vh #aaa";
-    nami.style.borderRadius = "0.8rem";
+    nami.style.borderRadius = "1.5vh";
     nami.style.fontWeight = "300";
     messi.style.backgroundColor = "#1e1e1e";
     messi.style.color = "#ffffff";
     messi.style.border = "solid 0.2vh #aaa";
-    messi.style.borderRadius = "0.8rem";
+    messi.style.borderRadius = "1.5vh";
     messi.style.fontWeight = "600";
        nami.addEventListener("mouseover", function() {
       nami.style.border = "solid 0.4vh #ffffff";     

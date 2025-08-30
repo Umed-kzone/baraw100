@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explore Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 100%;
+      margin: 20px auto;
+    }
+
+    .post {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .post-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .post-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post-info .name {
+      font-weight: bold;
+    }
+
+    .post-info .time {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .post-content {
+      margin: 10px 0;
+    }
+
+    .post-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .remove-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .add-link {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .add-link a {
+      text-decoration: none;
+      color: #1877f2;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="add-link">
+      <a href="add.html">➕ Add New Post</a>
+    </div>
+    <div id="posts"></div>
+  </div>
+
+  <script>
+    function loadPosts() {
+      const container = document.getElementById('posts');
+      container.innerHTML = '';
+      const posts = JSON.parse(localStorage.getItem('posts')) || [];
+
+      posts.forEach((post, index) => {
+        const div = document.createElement('div');
+        div.className = 'post';
+        div.innerHTML = `
+          <div class="post-header">
+            <img src="${post.avatar || 'https://via.placeholder.com/40'}" alt="User">
+            <div class="post-info">
+              <div class="name">${post.name}</div>
+              <div class="time">${post.time}</div>
+            </div>
+          </div>
+          <div class="post-content">${post.content}</div>
+          ${post.image ? `<img class="post-image" src="${post.image}" alt="Post Image">` : ''}
+          <button class="remove-btn" onclick="removePost(${index})">Remove</button>
+        `;
+        container.appendChild(div);
+      });
+
+      // Auto scroll
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function removePost(index) {
+      const posts = JSON.parse(localStorage.getItem('posts')) || [];
+      posts.splice(index, 1);
+      localStorage.setItem('posts', JSON.stringify(posts));
+      loadPosts();
+    }
+
+    window.onload = loadPosts;
+  </script>
+  
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBjJ3R9j48sbZiy5QtnMktyuRQlaV8Wrz0",
+    authDomain: "baraw100.firebaseapp.com",
+    projectId: "baraw100",
+    storageBucket: "baraw100.firebasestorage.app",
+    messagingSenderId: "1072257021315",
+    appId: "1:1072257021315:web:faac23d9a740ca4c97f2b6",
+    measurementId: "G-QVF0XN4P20"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>

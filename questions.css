@@ -3,7 +3,6 @@
       font-family: 'Segoe UI', sans-serif;
       background: #f2f4f8;
       color: #333;
-      width: 100%;
       direction: rtl;
              align-items: center;
              align-content: center;
@@ -64,13 +63,15 @@
 
         h1 {
             text-align: center;
-              margin-top: 5rem;
+              margin-top: 5vh;
+              font-size: 4vh;
         }
         #commentForm {
             background: white;
-            padding: 15px;
-            border-radius: 10px;
-            max-width: 22rem;
+            padding: 2vh;
+            border-radius: 2vh;
+              height: 40vh;
+            width: 50vh;
             margin: auto;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
               justify-content: center;
@@ -80,11 +81,13 @@
               text-align: center;
         }
         input, textarea, .submit {
-            width: 90%;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+              height: fit-content;
+            width: 45vh;
+              font-size: 3vh;
+            padding: 1vh;
+            margin: 1vh 0;
+            border-radius: 2vh;
+            border: 0.2vh solid #ccc;
             outline: none;
         }
         .submit {
@@ -97,42 +100,50 @@
             background: #218838;
         }
         #comments {
-            margin-top: 5rem;
-            max-width: 22rem;
-            margin-left: auto;
-            margin-right: auto;
+              margin: 2vh;
+            margin-top: 5vh;
+            max-width: 20vh;
+              align-items: right;
+        }
+ h2 {
+            font-size: 3vh;
               
         }
         .comment {
             background: white;
-            padding: 10px;
-            padding-top: 5px;
-            border-radius: 10px;
-            margin-bottom: 10px;
+            padding: 2vh;
+            padding-top: 1vh;
+            border-radius: 3vh;
+            margin-bottom: 2vh;
             box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
               transition: transform 0.2s ease;
+              height: fit-content;
+              width: 48vh;
         }
         .nm {
-              border-radius: 1rem;
-              padding: 0.2rem 0.8rem;
-              height: 1.5rem;
+              margin: 2vh 0vh;
+              font-size: 2.5vh;
+              border-radius: 2vh;
+              padding: 0.4vh 1.4vh;
+              height: fit-content;
               width: fit-content;
-              min-width: 2rem;
-              max-width: 25rem;
               text-align: center;
               justify-content: center;
               align-content: center;
               background-color: #ececec;
+              white-space: normal;
+              word-wrap: break-word;
+              
         }
         .comment:hover {
               transform: scale(1.08);
         }
         .ms {
-           font-size: 1rem;
+           font-size: 2.5vh;
               font-weight: 500;
         }
         .tm {
               color: grey;
-              font-size: 0.7rem;
+              font-size: 2.1rem;
               font-weight: 350;
         }

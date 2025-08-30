@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Add Post</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #1877f2;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #1877f2;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Add a New Post</h2>
+    <input type="text" id="name" placeholder="Your name" required />
+    <input type="text" id="avatar" placeholder="Profile image URL (optional)" />
+    <textarea id="content" placeholder="Write your post..." required></textarea>
+    <input type="text" id="image" placeholder="Post image URL (optional)" />
+    <button onclick="addPost()">Post</button>
+    <a href="explore.html">← Back to Explore</a>
+  </div>
+
+  <script>
+    function addPost() {
+      const name = document.getElementById('name').value.trim();
+      const content = document.getElementById('content').value.trim();
+      const image = document.getElementById('image').value.trim();
+      const avatar = document.getElementById('avatar').value.trim();
+
+      if (!name || !content) {
+        alert('Name and content are required!');
+        return;
+      }
+
+      const newPost = {
+        name,
+        avatar,
+        content,
+        image,
+        time: new Date().toLocaleString()
+      };
+
+      const posts = JSON.parse(localStorage.getItem('posts')) || [];
+      posts.push(newPost);
+      localStorage.setItem('posts', JSON.stringify(posts));
+
+      window.location.href = "explore.html";
+    }
+  </script>
+</body>
+</html>
