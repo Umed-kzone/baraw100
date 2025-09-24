@@ -1,11 +1,11 @@
-       body {
-      margin: 0;
+    body {
+      margin: 0px;
       font-family: 'Segoe UI', sans-serif;
-      background: #f2f4f8;
+      background-color: #f2f4f8;
       color: #333;
-      direction: rtl;
-             align-items: center;
-             align-content: center;
+      align-items: center;
+      align-content: center;
+      padding: 0px;
         }
             .menu {
        height: 7vh;
@@ -19,14 +19,13 @@
      text-align: center;
     border: none;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    direction: ltr;
   }
   
-    .menu .back {
+  .menu .back {
     background-color: #eeeeee;
     font-size: 2.4vh;
       font-weight: 700;
-      margin: 0px;
+    margin: 0px;
        margin-left: 2%;
        padding: 0.75vh 2.5vh;
        border: solid 0.25vh black;
@@ -71,7 +70,7 @@
             padding: 2vh;
             border-radius: 2vh;
               height: 40vh;
-            width: 50vh;
+            width: 40vh;
             margin: auto;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
               justify-content: center;
@@ -82,7 +81,7 @@
         }
         input, textarea, .submit {
               height: fit-content;
-            width: 45vh;
+            width: 38vh;
               font-size: 3vh;
             padding: 1vh;
             margin: 1vh 0;
@@ -118,11 +117,11 @@
             box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
               transition: transform 0.2s ease;
               height: fit-content;
-              width: 48vh;
+              width: 38vh;
         }
         .nm {
               margin: 2vh 0vh;
-              font-size: 2.5vh;
+              font-size: 3rem;
               border-radius: 2vh;
               padding: 0.4vh 1.4vh;
               height: fit-content;
@@ -139,7 +138,7 @@
               transform: scale(1.08);
         }
         .ms {
-           font-size: 2.5vh;
+           font-size: 2.6rem;
               font-weight: 500;
         }
         .tm {
