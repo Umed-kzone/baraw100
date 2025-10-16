@@ -12,15 +12,16 @@ const firebaseConfig = {
     // Listen for all clicks on the page
     document.addEventListener('click', function(event) {
       // Check if what was clicked is a button
-      if (event.target.tagName.toLowerCase() === 'a') {
+      
+                  
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
 
         // Submit a comment
         function submitAct() {
-          const buttonText = event.target.textContent.trim();
-            const message = "[" + savedUsername + "] Logged into (" + buttonText + ")";
+          const buttonText = event.target.closest('a').textContent.trim();
+            const message = "(" + savedUsername + ") --> [" + buttonText + "]";
             const now = new Date();
            const savedId = localStorage.getItem('id');
             
@@ -33,5 +34,5 @@ const firebaseConfig = {
                     ID: savedId
                 }) }};
          submitAct();
-      }
+      
     });
