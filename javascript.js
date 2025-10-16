@@ -97,6 +97,15 @@ function playSound() {
   });
 
 
+const savedId = localStorage.getItem('id');
+  if (!savedId) {
+    let randomInt = Math.floor((Math.random() * 9000) + 1000);
+    const id = randomInt;
+      localStorage.setItem('id', id);
+  }
+
+
+
 function defaulted() {
   body.style.backgroundColor = "#ffffff";
   drat.style.color = "#ff0000";
@@ -247,15 +256,6 @@ el.addEventListener("mouseout", function() {
       defaulted();
     }
   }
-
-
-  const savedId = localStorage.getItem('id');
-  if (!savedId) {
-    let randomInt = Math.floor((Math.random() * 9000) + 1000);
-    const id = randomInt;
-      localStorage.setItem('id', id);
-  }
-
 
 document.getElementById("theme").addEventListener("change", function() {
   const selectedtheme = this.value;

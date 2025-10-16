@@ -67,24 +67,24 @@
     
   </div>
   <p class="mts">بەشەکانی‌تر</p>
-  <h2 id="aler" style="display: none;">!ببورە ئەم بەشە لەژێر دروستکردندایە *</h2>
+  <h2 id="aler" style="display: none;">! ببورە، ئەم بەشە لە ئێستادا کار ناکات</h2>
   <div class="grid-container2">
     <a href="quran.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
       <img src="quran.png" alt="Profile 1">
       <div class="name">عیبادەت</div>
     </a>
-    <a href="table.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
+    <a style="display: none;" href="table.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
       <img src="table.png" alt="Profile 2">
       <div class="name">خشتە</div>
     </a>
-    <a href="plans.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
-      <img src="plans.png" alt="Profile 3">
+    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
+      <img style="background-color: #ddd;" src="plans.un.png" alt="Profile 3">
       <div class="name">پلان</div>
     </a>
     <a class="grid-item2"onclick="bounce(this), toggleVisibility(), playSound()">
       <img style="background-color: #ddd;" src="notes.png" alt="Profile 4">
       <div class="name">تێبینی گرنگ</div>
-    </a>
+   </a>
     <a style="display: none;" href="questions.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
       <img src="questions.png" alt="Profile 5">
       <div class="name">پرسیار</div>
@@ -107,8 +107,11 @@
   </form>
 </dialog>
 
-  
-  <script src="javascript.js"></script>
+      <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+     <script src="javascript.js"></script>
+     <script src="firedb.js"></script>
   
 </body>
 </html>
