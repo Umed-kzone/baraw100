@@ -12,6 +12,15 @@ const body = document.body;
   const bd = document.getElementById("chame");
   const hed = document.getElementById("niss");
 
+const firebaseConfig = {
+            apiKey: "AIzaSyBjJ3R9j48sbZiy5QtnMktyuRQlaV8Wrz0",
+            authDomain: "baraw100.firebaseapp.com",
+            databaseURL: "https://baraw100-default-rtdb.firebaseio.com",
+            projectId: "baraw100",
+            storageBucket: "baraw100.firebasestorage.app",
+            messagingSenderId: "1072257021315",
+            appId: "1:1072257021315:web:faac23d9a740ca4c97f2b6"
+        };
 
 function playSound() {
   const sound = document.getElementById("clickSound");
@@ -42,18 +51,44 @@ function playSound() {
       box.style.display = "none"; // show it
     }
   }
-  
-  document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function(event) {
+
+// Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        // Submit a comment
+       async function submitAct() {
+          const buttonText = event.target.closest('a').textContent.trim();
+            const message = "(" + savedUsername + ") --> [" + buttonText + "]";
+            const today = new Date();
+            const now = today.toLocaleTimeString('en-US', { hour12: true, hour:'2-digit', minute:'2-digit' });
+           const savedId = localStorage.getItem('id');
+            const monthName = new Date().toLocaleString('en-US', { month: 'long' });
+            const year = new Date().getFullYear();
+
+
+            if (message) {
+                db.ref(year + "-Logs/" + monthName).push({
+                    Action: message,
+                    Date: today.toISOString().split('T')[0],
+                    Time: now,
+                    ID: savedId
+                }) }};
+         
+window.addEventListener("DOMContentLoaded", () => {
+document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', async function(event) {
       event.preventDefault(); // Stop immediate navigation
-      const url = this.href;
-      if (url) {
-      setTimeout(() => {
-        window.location.href = url; // Navigate after 1 second delay
-      }, 500);
+      const url = this.getAttribute("href")?.trim();
+
+      await submitAct();
+      
+      if (url && url !== "#") {
+        window.location.href = url;
       }
     });
   });
+});
  const dialog = document.getElementById('loginDialog');
   const form = document.getElementById('loginForm');
   const weelcome = document.getElementById('wilcome');
