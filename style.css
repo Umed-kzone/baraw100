@@ -272,6 +272,7 @@ a:active {
       color: red;
   }
 
+
   .news-back {
     display: flex;
     justify-content: center;
@@ -282,7 +283,7 @@ a:active {
     padding-bottom: 0px;
   }
   .news-back marquee {
-   background-color: #8264B4; 
+   background-color: #248F8F; 
     color: #ffffff;
     width: 80%;
     height: 30px;
@@ -297,7 +298,7 @@ a:active {
     white-space: nowrap;
   }
   .news-back h4 {
-    background-color: #5D428A;
+    background-color: #0A5C5C;
     color: #ffffff;
     padding: 2px;
     width: 15%;
@@ -313,7 +314,7 @@ a:active {
     position: absolute;
     content: "";
     left: -28px;
-    border-right: 15px solid #5D428A;
+    border-right: 15px solid #0A5C5C;
     border-top: 17.5px solid transparent;
     border-left: 15px solid transparent;
     border-bottom: 17.5px solid transparent;
