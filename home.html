@@ -74,8 +74,12 @@
       <div class="name">عیبادەت</div>
     </a>
         <a style="display: none;" href="Actions.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
-      <img src="spectate.png" alt="Profile 1">
+      <img src="spectate.png" alt="Profile 7">
       <div class="name">Spectate</div>
+    </a>
+        <a style="display: none;" href="news.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
+      <img src="news.png" alt="Profile 8">
+      <div class="name">News</div>
     </a>
     <a style="display: none;" href="table.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
       <img src="table.png" alt="Profile 2">
@@ -100,7 +104,7 @@
     
   </div>
     <div class="news-back">
-    <marquee behavior="scroll" direction="right" scrollamount="6">بەپەلە: هەر ئێستا بەشی هەواڵ بۆ پەیجەکە زیادکرا و بەم زووانە دانانی هەواڵ و زانیارییەکانی سەبارەت بە خوێندن دەستپێدەکات </marquee>
+    <marquee id="news-text" behavior="scroll" direction="right" scrollamount="6"> </marquee>
     <h4>هەواڵ</h4>
   </div>
 
@@ -120,7 +124,7 @@
       <!-- Firebase SDK -->
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
-     <script src="javascript.js" defer></script>
+     <script src="javascript.js" type="module" defer></script>
     
   
 </body>

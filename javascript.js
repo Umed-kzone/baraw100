@@ -12,6 +12,10 @@ const body = document.body;
   const bd = document.getElementById("chame");
   const hed = document.getElementById("niss");
 
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getDatabase, ref, get, set } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+
 const firebaseConfig = {
             apiKey: "AIzaSyBjJ3R9j48sbZiy5QtnMktyuRQlaV8Wrz0",
             authDomain: "baraw100.firebaseapp.com",
@@ -89,7 +93,22 @@ document.querySelectorAll('a').forEach(link => {
     });
   });
 });
- const dialog = document.getElementById('loginDialog');
+
+  const itemRef = ref(db, "items/item1");
+  const editor = document.getElementById("news-text");
+  let originalValue = "";
+
+  get(itemRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        originalValue = snapshot.val();
+        editor.textContent = originalValue;
+      } else {
+        editor.value = "";
+        originalValue = "";
+      }
+    });
+
+  const dialog = document.getElementById('loginDialog');
   const form = document.getElementById('loginForm');
   const weelcome = document.getElementById('wilcome');
 
