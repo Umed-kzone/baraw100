@@ -272,6 +272,7 @@ a:active {
       color: red;
   }
 
+
   .news-back {
     display: flex;
     justify-content: center;
@@ -313,8 +314,8 @@ a:active {
     content: "";
     left: -31.5%;
     border-right: 1.5vh solid #5D428A;
-    border-top: 2vh solid transparent;
+    border-top: 1.5vh solid transparent;
     border-left: 1.5vh solid transparent;
-    border-bottom: 2vh solid transparent;
+    border-bottom: 1.5vh solid transparent;
     top: 0;
   }
