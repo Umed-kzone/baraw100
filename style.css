@@ -1,8 +1,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0px;
-      padding-bottom: 10px;
+      padding: 0;
       background-color: #ffffff;
       justify-content: center;
       aling-items: center;
@@ -48,7 +47,7 @@
          align-items: right;
       justify-content: right;
       place-items: right;
-      direction: rtl;
+      direction: ltr;
     }
     .grid-item {
       background-color: #fff;
@@ -146,7 +145,7 @@
         padding: 0.6vh;
               align-items: right;
       justify-content: right;
-        direction: rtl;
+        direction: ltr;
       }
     }
   .menu {
@@ -272,4 +271,50 @@ a:active {
   .shake::placeholder {
       color: red;
   }
-
+
+  .news-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    bottom: 0;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .news-back marquee {
+   background-color: #8264B4; 
+    color: #ffffff;
+    padding: 2%;
+    width: 80%;
+    height: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    font-weight: 600;
+    font-size: 0.70rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .news-back h4 {
+    background-color: #5D428A;
+    color: #ffffff;
+    padding: 2px;
+    width: 15%;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    position: relative;
+  }
+  .news-back h4:after{
+    position: absolute;
+    content: "";
+    left: -31.5%;
+    border-right: 1.5vh solid #5D428A;
+    border-top: 2vh solid transparent;
+    border-left: 1.5vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    top: 0;
+  }
