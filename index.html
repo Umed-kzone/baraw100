@@ -1,47 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Starting...</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #fff;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-  
-    #introText {
-      color: black;
-      font-size: 3em;
-      font-weight: 700;
-      opacity: 0;
-      animation: fadeInOut 1s ease-in-out forwards;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baraw100</title>
+<style>
+  body {
+    background: #0d0d0d;
+    color: #ff4444;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
-    @keyframes fadeInOut {
-      0% { opacity: 0; }
-      50% { opacity: 0.8; }
-      70% { text-shadow: 0px 0px 0px white; -webkit-text-stroke: 0px pink; }
-      80% { text-shadow: 0px 0px 15px black; -webkit-text-stroke: 2px white; }
-      100% { opacity: 1; }
-    }
-  </style>
+  .lock {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    background: #111;
+    border: 2px solid #ff9944;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff6644aa;
+    transition: transform 0.2s ease;
+  }
+
+  .lock::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    width: 50px;
+    height: 60px;
+    padding-bottom: 2px;
+    border: 8px solid #aaaaaa;
+    border-bottom: 2px solid #ff9944;
+    border-radius: 50px 50px 10px 10px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px #ff994466;
+    transition: transform 0.2s ease;
+  }
+
+  
+  .text {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #ff5555;
+    text-shadow: 0 0 10px #ff4400ff;
+    transition: transform 0.1s ease;
+  }
+
+  /* Broken lock attempt animation */
+  .break-attempt {
+    animation: shake-lock 0.4s ease;
+  }
+
+  @keyframes shake-lock {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(8deg); }
+  }
+
+  /* Text shaking animation */
+  .shake-text {
+    animation: shake-text 0.4s ease;
+  }
+
+  @keyframes shake-text {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(6px); }
+    50% { transform: translateX(-6px); }
+    75% { transform: translateX(4px); }
+  }
+
+</style>
 </head>
 <body>
-  <div id="introText" class="tkst">Baraw100.com</div>
-
+  <div class="lock"></div>
+  <div class="text">website is in-active at this time</div>
 
   <script>
-    // Optional: Hide the text completely after animation
-    setTimeout(() => {
-      document.getElementById("introText").style.display = "none";
-      window.location.href = "home.html";
-    }, 1500);
+    const lock = document.querySelector('.lock');
+    const text = document.querySelector('.text');
+
+    document.body.addEventListener('click', () => {
+      lock.classList.add('break-attempt');
+      text.classList.add('shake-text');
+
+      // Remove classes after animation ends
+      setTimeout(() => {
+        lock.classList.remove('break-attempt');
+        text.classList.remove('shake-text');
+      }, 400);
+    });
   </script>
 </body>
 </html>
