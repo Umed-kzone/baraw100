@@ -1,131 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Baraw100</title>
-  <!-- For modern browsers -->
-<link rel="icon" type="image/png" href="favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inactive Website</title>
+<style>
+  body {
+    background: #0d0d0d;
+    color: #ff4444;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
 
-<!-- For older browsers (ICO format) -->
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  .lock {
+    position: relative;
+    width: 80px;
+    height: 100px;
+    background: #111;
+    border: 2px solid #ff9944;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ff6644aa;
+    transition: transform 0.2s ease;
+  }
 
-<!-- For high-resolution devices (optional) -->
-<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
-  <link rel="stylesheet" href="style.css">
+  .lock::before {
+    content: "";
+    position: absolute;
+    top: -55px;
+    left: 50%;
+    width: 50px;
+    height: 60px;
+    padding-bottom: 2px;
+    border: 8px solid #aaaaaa;
+    border-bottom: 2px solid #ff9944;
+    border-radius: 50px 50px 10px 10px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px #ff994466;
+    transition: transform 0.2s ease;
+  }
+
+  
+  .text {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #ff5555;
+    text-shadow: 0 0 10px #ff4400ff;
+    transition: transform 0.1s ease;
+  }
+
+  /* Broken lock attempt animation */
+  .break-attempt {
+    animation: shake-lock 0.4s ease;
+  }
+
+  @keyframes shake-lock {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(8deg); }
+  }
+
+  /* Text shaking animation */
+  .shake-text {
+    animation: shake-text 0.4s ease;
+  }
+
+  @keyframes shake-text {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(6px); }
+    50% { transform: translateX(-6px); }
+    75% { transform: translateX(4px); }
+  }
+
+</style>
 </head>
 <body>
-  <audio id="clickSound" src="click.ogg" preload="auto"></audio>
-  <audio id="clickSound2" src="click3.mp3" preload="auto"></audio>
-  
-  <div class="menu" id="menu">
-        <div onclick="playSound(), bounce(this), showme(), reno()" id="wilcome" class="user-name"></div>
-        <p class="logo" id="logo">Baraw 100</p>
-    <div>
-    <label for="color" class="mode" id="choosetheme">Theme</label>
-<select id="theme" class="score" name="color" onclick="playSound(), bounce(this)" style="border: 1px solid black; border-radius: 1vh;">
-  <option value="default" style="background-color: white; color: #000000;">Default</option>
-  <option value="rose" style="background-color: #ffaab8; color: #ff193b;">Rose</option>
-  <option value="charcoal" style="background-color: #2d2d2d; color: #ffbb00;">Charcoal</option>
-</select>
-    </div>
-  </div>
-  
-  <p class="mts" id="mro">مامۆستایان</p>
+  <div class="lock"></div>
+  <div class="text">website is in-active at this time</div>
 
-  <div class="grid-container">
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusit60ddHd4vzhW18Z4ihgXc&si=4eFXLPPQfB91pn17" class="grid-item" onclick="playSound2()">
-      <img src="Biology.jpg" alt="part 1">
-      <div class="name">زیـندەزانـی</div>
-      <div class="title">م.صـنعان حـامد</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PL0JjfIYvwyEu6pTd-kEle48rguD87s64j&si=7hXh3j33hMgQbVRt" class="grid-item" onclick="playSound2()">
-      <img src="English.jpg" alt="part 2">
-      <div class="name">English <br> (Grammer)</div>
-      <div class="title">م.یـوسف ڕەسـول</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PLl0EZqS7iusiyQZdryTtmumu--YBYA3US&si=7dlLqCY9hQ9p2_-4" class="grid-item" onclick="playSound2()">
-      <img src="Physics.jpg" alt="part 3">
-      <div class="name">فـیزیا</div>
-      <div class="title">م.کاروان کەیـفی</div>
-    </a>
-        <a href="https://youtube.com/playlist?list=PLnB5hQCad1pScRAk1_F3WnlDd5mcNGN6v&si=6JwL68fSCdIX_ORY" class="grid-item" onclick="playSound2()">
-      <img src="Chemistry.jpg" alt="part 4">
-      <div class="name">کـیمیا</div>
-      <div class="title">م.هـێدی حـسن</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PLqibWIL7z4MsffOMQAgfndjELjTB62Xxy&si=PZ2OddEqxdfed72i" class="grid-item" onclick="playSound2()">
-      <img src="English3.jpg" alt="part 5">
-      <div class="name">English <br> (Reading)</div>
-      <div class="title">م.عـبدالقـادر</div>
-    </a>
-    <a href="https://youtube.com/playlist?list=PLY4NmEug7MiBoXsmGnAv3EzBDm1TaMq7I&si=od_q1JmP4lcbcRCf" class="grid-item" onclick="playSound2()">
-      <img src="Biology2.jpg" alt="part 6">
-      <div class="name">زیندەزانی</div>
-      <div class="title">م.هوشیار حسن</div>
-    </a>
-    
-  </div>
-  <p class="mts">بەشەکانی‌تر</p>
-  <h2 id="aler" style="display: none;">! ببورە، ئەم بەشە لە ئێستادا کار ناکات</h2>
-  <div class="grid-container2">
-    <a href="quran.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
-      <img src="quran.png" alt="Profile 1">
-      <div class="name">عیبادەت</div>
-    </a>
-        <a style="display: none;" href="Actions.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
-      <img src="spectate.png" alt="Profile 7">
-      <div class="name">Spectate</div>
-    </a>
-        <a style="display: none;" href="news.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
-      <img src="news.png" alt="Profile 8">
-      <div class="name">News</div>
-    </a>
-    <a style="display: none;" href="table.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
-      <img src="table.png" alt="Profile 2">
-      <div class="name">خشتە</div>
-    </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img style="background-color: #ddd;" src="plans.un.png" alt="Profile 3">
-      <div class="name">پلان</div>
-    </a>
-    <a class="grid-item2"onclick="bounce(this), toggleVisibility(), playSound()">
-      <img style="background-color: #ddd;" src="notes.png" alt="Profile 4">
-      <div class="name">تێبینی گرنگ</div>
-   </a>
-    <a style="display: none;" href="questions.html" class="grid-item2" onclick="bounce(this), reverseVisibility(), playSound()">
-      <img src="questions.png" alt="Profile 5">
-      <div class="name">پرسیار</div>
-    </a>
-    <a class="grid-item2" onclick="bounce(this), toggleVisibility(), playSound()">
-      <img  style="background-color: #ddd;" src="diet.png" alt="Profile 6">
-      <div class="name">تەندروستی</div>
-    </a>
-    
-  </div>
-    <div class="news-back">
-    <marquee id="news-text" behavior="scroll" direction="right" scrollamount="6"> </marquee>
-    <h4>هەواڵ</h4>
-  </div>
+  <script>
+    const lock = document.querySelector('.lock');
+    const text = document.querySelector('.text');
 
-  
-<dialog id="loginDialog">
-  <form method="dialog" id="loginForm">
-    <h3 id="niss">Change your name !</h3>
-    <label for="username">Username:</label>
-    <input type="text" placeholder="ناوت لێرە بنووسە" id="username">
-    <p class="moos"><strong>تێبینی !</strong><br> ئەم ناوە شاراوەیە و تەنها خودی بەکارهێنەر ناوەکە دەبینێت</p>
-    <button class="pd" id="chane" type="submit" onclick="playSound(), bounce(this)">Enter</button>
-    <button class="pd" id="chame" type="button" onclick="playSound(), bounce(this), showles()">Close</button>
-  </form>
-</dialog>
+    document.body.addEventListener('click', () => {
+      lock.classList.add('break-attempt');
+      text.classList.add('shake-text');
 
-
-      <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
-     <script src="javascript.js" type="module" defer></script>
-    
-  
+      // Remove classes after animation ends
+      setTimeout(() => {
+        lock.classList.remove('break-attempt');
+        text.classList.remove('shake-text');
+      }, 400);
+    });
+  </script>
 </body>
 </html>
